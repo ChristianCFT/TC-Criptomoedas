@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr;
+    grid-template-rows: 0.5fr 4fr 1fr;
+    grid-template-areas: 
+    "nav header header"
+    "nav main main"
+    "footer footer footer";
+}
+
+body, html{
+    height: 100%;
+}
+
+header{
+    grid-area: header;
+    background-color: rgba(245, 245, 245, 0.877);
+    h1{
+        margin: 1rem 2rem 0.25rem 2rem;
+    }
+    p{
+        margin: 0rem 2rem 1rem 2rem;
+    }
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: nav;
+    gap: 3rem;
+    background-color: rgb(22 75 223);
+    figure{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        figcaption{
+            color: white;
+            font-size: large;
+            font-weight: bold;
+        }
+
+        img{
+            width: 4rem;
+            border-radius: 50%;
+            margin: 1rem;
+        } 
+    }
+
+    ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+
+    li {
+        list-style: none;
+        padding: 0.3rem;
+        width: 100%;
+        margin: 0.5rem 0;
+
+        a {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+
+            color: white;
+            text-decoration: none;
+            font-size: large;
+            text-align: center;
+
+            padding: 0.8rem 1rem;
+        }
+    }
+}
+
+    #inicio{
+        border-radius: 0.8rem;
+        background-color: #0a1c5a;
+        font-weight: bold;       
+    }
+}
+
+main{
+    grid-area: main;
+    background-color: rgba(245, 245, 245, 0.877);
+
+    .area-informacoes{
+        display: flex;
+        justify-content: space-around;
+        margin: 0.5rem 0rem 2rem 0rem;
+
+        #patrimonio, #qtd-carteira{
+            box-shadow: 3px 3px 3px 0px rgb(22 75 223);
+            border: 1px solid rgb(22 75 223);
+            background-color: rgb(255, 255, 255);
+            width: 30%;
+            height: 8rem;
+            border-radius: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            div{
+                width: 60%;
+            }
+
+            img{
+                width: 5rem;
+                height: 5rem;
+                border-radius: 1rem;
+                margin: 1rem;
+            }
+
+            #title{
+                font-weight: bold;
+            }
+
+            #valor{
+                font-weight: bold;
+                font-size: x-large;
+            }
+        }
+    }
+
+    .area-carteiras{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        .criar-carteira{
+            display: flex;
+            justify-content: space-between;
+
+            div{
+                h2{
+                    display: flex;
+                    margin: 0rem 2rem 0.25rem 2rem;
+                    align-items: start;
+                }
+                p{
+                    margin: 0rem 2rem 1rem 2rem;
+                }
+            }
+
+            button{
+                margin: 0.6rem 3rem;
+                width: 10rem;
+                border-radius: 0.5rem;
+                border: 1px solid rgb(22 75 223);
+                background-color: rgb(22 75 223);
+                color: white;
+                font-size: medium;
+                font-weight: bold;
+            }
+        }
+
+        .carteiras{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            #card-carteira{
+                box-shadow: 3px 3px 3px 0px rgb(22 75 223);
+                border: 1px solid rgb(22 75 223);
+                background-color: rgb(255, 255, 255);
+                border-radius: 1rem;
+                width: 25rem;
+                height: 12rem;
+                align-items: start;
+                margin: 1rem;
+
+                div{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    h3{
+                        width: 60%;
+                    }
+                }
+
+                #info-saldo{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    margin-left: 2rem;
+
+                    #titulo-saldo, #saldo{
+                        font-weight: bold;
+                    }
+
+                    #saldo{
+                        font-size: large;
+                    }
+                }
+
+                img{
+                    width: 3rem;
+                    height: 3rem;
+                    border-radius: 1rem;
+                    margin: 1rem;
+                }
+
+                button{
+                    width: 80%;
+                    height: 2rem;
+                    border-radius: 0.5rem;
+                    border: 1px solid rgb(22 75 223);
+                    background-color: rgb(22 75 223);
+                    color: white;
+                    font-size: medium;
+                    font-weight: bold;
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}
+
+footer{
+    grid-area: footer;
+    background: #0a1c5a;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+
+    h3{
+        margin-bottom: 1rem;
+    }
+
+    p{
+        margin: 0.3rem 0;
+    }
+
+    small{
+        display: block;
+        margin-top: 1rem;
+        opacity: 0.8;
+    }
+
+}
