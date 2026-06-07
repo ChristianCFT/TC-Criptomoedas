@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr;
+    grid-template-rows: 0.5fr 4fr 1fr;
+    grid-template-areas: 
+    "nav header header"
+    "nav main main"
+    "footer footer footer";
+}
+
+body, html{
+    height: 100%;
+}
+
+header{
+    grid-area: header;
+    background-color: rgba(245, 245, 245, 0.877);
+    padding: 0 0 1.5rem 0;
+    h1{
+        margin: 1rem 2rem 0.25rem 2rem;
+    }
+    p{
+        margin: 0rem 2rem 1rem 2rem;
+    }
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: nav;
+    gap: 3rem;
+    background-color: rgb(22 75 223);
+    figure{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        figcaption{
+            color: white;
+            font-size: large;
+            font-weight: bold;
+        }
+
+        img{
+            width: 4rem;
+            border-radius: 50%;
+            margin: 1rem;
+        } 
+    }
+
+    ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+
+    li {
+        list-style: none;
+        padding: 0.3rem;
+        width: 100%;
+        margin: 0.5rem 0;
+
+        a {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+
+            color: white;
+            text-decoration: none;
+            font-size: large;
+            text-align: center;
+
+            padding: 0.8rem 1rem;
+        }
+    }
+}
+
+    #criptoativos{
+        border-radius: 0.8rem;
+        background-color: #0a1c5a;
+        font-weight: bold;       
+    }
+}
+
+img{
+    width: 2.5rem;
+    border-radius: 50%;
+    margin: 0 1rem;
+}
+
+main{
+    grid-area: main;
+    background-color: rgba(245, 245, 245, 0.877);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home{
+    display: flex-start;
+    width: 65%;
+}
+
+#retorno{
+    margin: 1rem;
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+
+    a{
+        text-decoration: none;
+        font-size: x-large;
+    }
+}
+
+.criptos{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#moedaUnitaria{
+    background-color: white;
+    border: 2px solid rgba(0, 4, 255, 0.171);
+    border-radius: 1rem;
+    width: 90%;
+    padding: 0.8rem;
+    margin: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+#info, #preco{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+button{
+    width: 5rem;
+    height: 2rem;
+    border-radius: 1rem;
+    margin: auto 0;
+    border: 1px solid blue;
+    color: white;
+    background-color: rgb(22 75 223);;
+}
+
+footer{
+    grid-area: footer;
+    background: #0a1c5a;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+
+    h3{
+        margin-bottom: 1rem;
+    }
+
+    p{
+        margin: 0.3rem 0;
+    }
+
+    small{
+        display: block;
+        margin-top: 1rem;
+        opacity: 0.8;
+    }
+
+}
