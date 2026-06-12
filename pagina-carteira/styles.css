@@ -229,7 +229,6 @@ main{
 
 .linha-ativo:hover{
     background-color: #f8f8f8;
-    transform: translateX(5px);
 }
 
 
