@@ -43,42 +43,49 @@
     <main>
 
         <!-- Resumo -->
-        <section>
+        <section id="resumo-carteira">
 
-            <div>
-                <h3>Saldo total da carteira</h3>
-                <p>R$ <span>7399,99</span></p>
+            <div class="card-resumo">
+                <img src="/pagina-carteira/img/moeda.jpg" alt="">
+                <div>
+                    <h3 class="title-card-resumo">SALDO TOTAL DA CARTEIRA</h3>
+                    <p class="valor-card-resumo">R$ <span>7399,99</span></p>
+                </div>
             </div>
 
-            <div>
-                <h3>Quantidade de criptomoedas</h3>
-                <p>8</p>
-                <p>Ativos diferentes</p>
+            <div class="card-resumo">
+                <img src="/pagina-carteira/img/carteira.jpg" alt="">
+                <div>
+                    <h3 class="title-card-resumo">QUANTIDADE DE CRIPTOMOEDAS</h3>
+                    <p class="valor-card-resumo"><span>8</span></p>
+                    <p id="p-dif" >Ativos diferentes</p>
+                </div>
             </div>
 
         </section>
 
         <!-- Ativos -->
-         <section>
+         <section id="ativos">
 
             <!-- Ações -->
-            <section>
+            <section id="cabecalho-ativos">
 
-                <div>
+                <div class="conteudo-cabecalho">
                     <h2>Seus Ativos</h2>
-                    <p>Veja suas criptomoedas e gerencie suas posções</p>
+                    <p>Veja suas criptomoedas e gerencie suas posições</p>
                 </div>
 
-                <div>
-                    <button>Comprar Criptomoeda</button>
+                <div class="acoes-cabecalho">
+                    <button id="btn-comprar-cripto">Comprar Criptomoeda</button>
                 </div>
             
             </section>
 
             <!-- Tabela -->
-            <section>
+            <section id="secao-tabela-ativos">
 
-                <table>
+                <table id="tabela-ativos">
+
                     <thead>
 
                         <tr>
@@ -86,18 +93,105 @@
                             <th>Quantidade</th>
                             <th>Preço Atual</th>
                             <th>Valor Total</th>
-                            <th>Ações</th>
+                            <th id="th-acoes">Ações</th>
                         </tr>
-                    
+
                     </thead>
-                    
+
+                    <tbody>
+
+                        <tr class="linha-ativo">
+
+                            <td class="coluna-cripto">
+
+                                <div class="ativo-cripto">
+
+                                    <img src="/logo-img/logo-2.jpeg" alt="Bitcoin">
+
+                                    <div class="info-cripto">
+                                        <p class="p-nome-moeda">BitCoin</p>
+                                        <p class="p-sigla-moeda">BTC</p>
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td class="coluna-quantidade">
+                                0,1523 BTC
+                            </td>
+
+                            <td class="coluna-preco">
+                                R$ 368.123,45
+                            </td>
+
+                            <td class="coluna-valor-total">
+                                R$ 56.023,87
+                            </td>
+
+                            <td class="coluna-acoes">
+
+                                <div class="acoes-ativo">
+
+                                    <button class="btn-comprar">Comprar</button>
+                                    <button class="btn-vender">Vender</button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                        <tr class="linha-ativo">
+
+                            <td class="coluna-cripto">
+
+                                <div class="ativo-cripto">
+
+                                    <img src="/logo-img/logo-2.jpeg" alt="Bitcoin">
+
+                                    <div class="info-cripto">
+                                        <p class="p-nome-moeda">BitCoin</p>
+                                        <p class="p-sigla-moeda">BTC</p>
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td class="coluna-quantidade">
+                                0,1523 BTC
+                            </td>
+
+                            <td class="coluna-preco">
+                                R$ 368.123,45
+                            </td>
+
+                            <td class="coluna-valor-total">
+                                R$ 56.023,87
+                            </td>
+
+                            <td class="coluna-acoes">
+
+                                <div class="acoes-ativo">
+
+                                    <button class="btn-comprar">Comprar</button>
+                                    <button class="btn-vender">Vender</button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
                 </table>
 
             </section>
 
-         </section>
-
-
+        </section>
+            
     </main>
 
     <!-- Rodapé -->
