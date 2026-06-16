@@ -1,37 +1,46 @@
 # Dependências
 node_modules/
 
-# Arquivos de log
+# Logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
 # Variáveis de ambiente
 .env
 .env.local
+.env.*
+*.local
 
-# Arquivos do VS Code
+# VS Code
 .vscode/
 
-# Arquivos do sistema operacional
+# JetBrains
+.idea/
+
+# Sistema operacional
 .DS_Store
 Thumbs.db
 
-# Arquivos temporários
+# Temporários
 tmp/
 temp/
 
-# Build/Distribuição
+# Build
 dist/
+dist-ssr/
 build/
 
 # Cache
 .cache/
 .parcel-cache/
-
-# Sass
 .sass-cache/
 
 # Cobertura de testes
 coverage/
+
+# Arquivos gerados por ferramentas
+*.tsbuildinfo
