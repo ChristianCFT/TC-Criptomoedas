@@ -1,6 +1,5 @@
 /* Cabeçalho */
 header{
-    grid-area: header;
     background-color: white;
     border-bottom: 1px solid #e5e7eb;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -18,7 +17,6 @@ header{
 
 /* Principal */
 main{
-    grid-area: main;
     padding: 2rem;
 }
 
