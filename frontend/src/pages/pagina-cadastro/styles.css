@@ -8,7 +8,6 @@
 body,html{
     height: 100%;
     width: 100%;
-    background-color: rgba(245, 245, 245, 0.877);
 }
 
 main{
@@ -26,6 +25,7 @@ main{
     justify-content: center;
     align-items: center;
     padding: 0 4rem;
+    background-color: rgba(245, 245, 245, 0.877);
 }
 .layout-midia{
     display: flex;

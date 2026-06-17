@@ -1,5 +1,5 @@
-import moeda from "../assets/images/moeda.png";
-import carteira from "../assets/images/carteira.png";
+import moeda from "../assets/images/moeda.jpg";
+import carteira from "../assets/images/carteira.jpg";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../styles/inicial.css"
