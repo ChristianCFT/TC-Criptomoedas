@@ -12,7 +12,6 @@ function Inicial(){
                 <p>Bem-vindo de volta a TC Criptomoedas.</p>
             </header>
 
-            <Navbar />
 
             <main>
 
@@ -56,7 +55,6 @@ function Inicial(){
 
             </main> 
 
-            <Footer />
         </>
     );
 }
