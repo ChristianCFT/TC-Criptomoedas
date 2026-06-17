@@ -4,11 +4,11 @@ import "../styles/login.css"
 function Login(){
     return (
         <>
-            <header>
+            <header className="header-login">
                 <img src={logo} alt="LogoCT" />
             </header>
 
-            <main>
+            <main className="main-login">
 
                 <form>
 

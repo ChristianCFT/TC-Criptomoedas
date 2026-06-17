@@ -14,18 +14,18 @@ function Cadastro(){
                     <div id="campos">
 
                         <div className="bloco-campo">
-                            <label htmlFor="nome">Nome Completo</label>
-                            <input type="text" name="nome" id="nome" />
+                            <label className="label-cadastro" htmlFor="nome">Nome Completo</label>
+                            <input className="input-cadastro" type="text" name="nome" id="nome" />
                         </div>
 
                         <div className="bloco-campo">
-                            <label htmlFor="email">E-mail</label>
-                            <input type="text" name="email" id="email" />
+                            <label className="label-cadastro" htmlFor="email">E-mail</label>
+                            <input className="input-cadastro" type="text" name="email" id="email" />
                         </div>
 
                         <div className="bloco-campo">
-                            <label htmlFor="senha">Senha</label>
-                            <input type="password" name="senha" id="senha" />
+                            <label  className="label-cadastro" htmlFor="senha">Senha</label>
+                            <input  className="input-cadastro" type="password" name="senha" id="senha" />
                         </div>
 
                     </div>

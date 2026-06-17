@@ -4,8 +4,8 @@ import LayoutGrid from "./components/LayoutGrid";
 
 import Inicial from "./pages/Inicial";
 import Carteira from "./pages/Carteira";
-// import Login from "./pages/Login";
-// import Cadastro from "./pages/Cadastro";
+import Login from "./pages/Login";
+import Cadastro from "./pages/Cadastro";
 
 
 function App(){
@@ -32,7 +32,16 @@ function App(){
                 </Route>
 
 
-                
+                {/* páginas sem layout */}
+                <Route 
+                    path="/login" 
+                    element={<Login />}
+                />
+
+                <Route 
+                    path="/cadastro" 
+                    element={<Cadastro />}
+                />
 
 
             </Routes>

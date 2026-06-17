@@ -54,14 +54,14 @@
     }
 }
 
-input{
+.input-cadastro{
     padding: 1rem;
     border-radius: 0.5rem;
     border: solid 1px rgb(163, 163, 163);
     font-size: 0.9rem;
 }
 
-label{
+.label-cadastro{
     margin-bottom: 0.3rem;
     font-size: 0.9rem;
     font-weight: bold;

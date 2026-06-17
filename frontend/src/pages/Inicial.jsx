@@ -7,13 +7,13 @@ import "../styles/inicial.css"
 function Inicial(){
     return (    
         <>
-            <header>
+            <header className="header-inicial">
                 <h1>Olá, <span>Usuário</span>!</h1>
                 <p>Bem-vindo de volta a TC Criptomoedas.</p>
             </header>
 
 
-            <main>
+            <main className="main-inicial">
 
                 <div className="area-informacoes">
 

@@ -1,4 +1,4 @@
-header{
+.header-inicial{
     background: white;
     border-bottom: 1px solid #e5e7eb;
     box-shadow: 0 2px 10px rgba(0,0,0,.05);
@@ -14,7 +14,7 @@ header p{
     color: #6b7280;
 }
 
-main{
+.main-inicial{
     padding: 2rem;
 
     .area-informacoes{

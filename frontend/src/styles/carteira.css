@@ -1,5 +1,5 @@
 /* Cabeçalho */
-header{
+.header-carteira{
     background-color: white;
     border-bottom: 1px solid #e5e7eb;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -16,7 +16,7 @@ header{
 }
 
 /* Principal */
-main{
+.main-carteira{
     padding: 2rem;
 }
 

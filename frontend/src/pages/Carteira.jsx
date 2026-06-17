@@ -6,7 +6,7 @@ function Carteira() {
         <>
 
             {/* Cabeçalho */}
-            <header>
+            <header className="header-carteira">
 
                 <h1>
                     <span>Nome da Carteira</span>
@@ -20,7 +20,7 @@ function Carteira() {
 
 
             {/* Principal */}
-            <main>
+            <main className="main-carteira">
 
 
                 {/* Resumo */}
