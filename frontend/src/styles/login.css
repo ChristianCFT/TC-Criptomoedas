@@ -17,12 +17,12 @@ form{
     justify-content: center;
 }
 
-label, input{
+.label-login, .input-login{
     display: block;
     width: 90%;
 }
 
-input{
+.input-login{
     margin-bottom: 1rem;
     padding: 0.8rem;
     border-radius: 0.5rem;
@@ -30,7 +30,7 @@ input{
     font-size: small;
 }
 
-label{
+.label-login{
     margin-bottom: 0.3rem;
     font-size: small;
     font-weight: bold;
@@ -82,7 +82,7 @@ label{
     font-size: small;
 }
 
-#btn-acessar{
+.btn-login{
     padding: 1rem;
     width: 12rem;;
     border-radius: 1.5rem;

@@ -19,15 +19,15 @@ function Login(){
                         </div>
 
                         <div className="inputs">
-                            <label htmlFor="email">E-mail</label>
-                            <input type="text" id="email" placeholder="E-mail" />
-                            <label htmlFor="senha">Senha</label>
-                            <input type="password" id="senha" placeholder="Senha" />
+                            <label className="label-login" htmlFor="email">E-mail</label>
+                            <input className="input-login" type="text" id="email" placeholder="E-mail" />
+                            <label className="label-login" htmlFor="senha">Senha</label>
+                            <input className="input-login" type="password" id="senha" placeholder="Senha" />
                         </div>
 
                         <a id="esqueci-senha" href="#">Esqueci minha senha</a>
 
-                        <button type="submit" id="btn-acessar">ACESSAR CONTA</button>
+                        <button className="btn-login" type="submit" id="btn-acessar">ACESSAR CONTA</button>
 
                     </div>
 
