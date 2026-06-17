@@ -1,4 +1,4 @@
-header{
+.header-criptoativos{
     background: white;
     border-bottom: 1px solid #e5e7eb;
     box-shadow: 0 2px 10px rgba(0,0,0,.05);
@@ -14,7 +14,7 @@ header{
     }
 }
 
-main{
+.main-criptoativos{
     background-color: rgba(245, 245, 245, 0.877);
     padding: 0 2rem;
     margin-top: 2rem;

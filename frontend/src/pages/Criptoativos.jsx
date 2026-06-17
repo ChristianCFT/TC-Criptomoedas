@@ -3,13 +3,13 @@ import "../styles/criptoativos.css"
 function Criptoativos(){
     return(
         <>
-            <header>
+            <header className="header-criptoativos">
                 <h1>Olá, <span>Usuário</span>!</h1>
                 <p>Faça a escolha do ativo que falta na sua carteira.</p>
             </header>
 
-            <main>
-                <div class="criptos">
+            <main className="main-criptoativos">
+                <div className="criptos">
                     <table id="tabela-ativos">
 
                             <thead>
@@ -26,41 +26,41 @@ function Criptoativos(){
 
                             <tbody>
 
-                                <tr class="linha-ativo">
+                                <tr className="linha-ativo">
 
-                                    <td class="coluna-cripto">
+                                    <td className="coluna-cripto">
 
-                                        <div class="ativo-cripto">
+                                        <div className="ativo-cripto">
 
                                             <img src="/logo-img/logo-2.jpeg" alt="Bitcoin" />
 
-                                            <div class="info-cripto">
-                                                <p class="p-nome-moeda">BitCoin</p>
-                                                <p class="p-sigla-moeda">BTC</p>
+                                            <div className="info-cripto">
+                                                <p className="p-nome-moeda">BitCoin</p>
+                                                <p className="p-sigla-moeda">BTC</p>
                                             </div>
 
                                         </div>
 
                                     </td>
 
-                                    <td class="coluna-quantidade">
+                                    <td className="coluna-quantidade">
                                         0,1523 BTC
                                     </td>
 
-                                    <td class="coluna-preco">
+                                    <td className="coluna-preco">
                                         R$ 368.123,45
                                     </td>
 
-                                    <td class="coluna-valor-total">
+                                    <td className="coluna-valor-total">
                                         R$ 56.023,87
                                     </td>
 
-                                    <td class="coluna-acoes">
+                                    <td className="coluna-acoes">
 
-                                        <div class="acoes-ativo">
+                                        <div className="acoes-ativo">
 
-                                            <button class="btn-comprar">Comprar</button>
-                                            <button class="btn-vender">Vender</button>
+                                            <button className="btn-comprar">Comprar</button>
+                                            <button className="btn-vender">Vender</button>
 
                                         </div>
 
@@ -68,41 +68,41 @@ function Criptoativos(){
 
                                 </tr>
 
-                                <tr class="linha-ativo">
+                                <tr className="linha-ativo">
 
-                                    <td class="coluna-cripto">
+                                    <td className="coluna-cripto">
 
-                                        <div class="ativo-cripto">
+                                        <div className="ativo-cripto">
 
                                             <img src="/logo-img/logo-2.jpeg" alt="Bitcoin" />
 
-                                            <div class="info-cripto">
-                                                <p class="p-nome-moeda">BitCoin</p>
-                                                <p class="p-sigla-moeda">BTC</p>
+                                            <div className="info-cripto">
+                                                <p className="p-nome-moeda">BitCoin</p>
+                                                <p className="p-sigla-moeda">BTC</p>
                                             </div>
 
                                         </div>
 
                                     </td>
 
-                                    <td class="coluna-quantidade">
+                                    <td className="coluna-quantidade">
                                         0,1523 BTC
                                     </td>
 
-                                    <td class="coluna-preco">
+                                    <td className="coluna-preco">
                                         R$ 368.123,45
                                     </td>
 
-                                    <td class="coluna-valor-total">
+                                    <td className="coluna-valor-total">
                                         R$ 56.023,87
                                     </td>
 
-                                    <td class="coluna-acoes">
+                                    <td className="coluna-acoes">
 
-                                        <div class="acoes-ativo">
+                                        <div className="acoes-ativo">
 
-                                            <button class="btn-comprar">Comprar</button>
-                                            <button class="btn-vender">Vender</button>
+                                            <button className="btn-comprar">Comprar</button>
+                                            <button className="btn-vender">Vender</button>
 
                                         </div>
 

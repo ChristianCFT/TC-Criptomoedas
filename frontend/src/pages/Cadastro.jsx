@@ -3,7 +3,7 @@ import "../styles/cadastro.css"
 
 function Cadastro(){
     return(
-        <main>
+        <main className="main-cadastro">
             <div className="layout-midia">
                 <img src={logo} alt="LogoCT" />
             </div>
