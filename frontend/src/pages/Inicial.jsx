@@ -47,7 +47,7 @@ function Inicial(){
                         </div>
                         <button>+ Criar carteira</button>
                     </div>
-                    <div className="carteiras">
+                    <div className="area-carteiras-grid">
 
 
                     </div> 
