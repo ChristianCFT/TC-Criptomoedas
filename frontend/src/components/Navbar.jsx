@@ -3,19 +3,19 @@ import "../styles/navbar.css"
 
 function Navbar(){
     return(
-        <nav>
+        <nav className="navbar-container">
 
-            <figure>
-                <img src={logo} alt="Logo TC" />
-                <figcaption>TC Criptomoedas</figcaption>
+            <figure className="navbar-figure">
+                <img className="navbar-img" src={logo} alt="Logo TC" />
+                <figcaption className="navbar-figcaption">TC Criptomoedas</figcaption>
             </figure>
 
-            <ul>
+            <ul className="navbar-ul">
 
-                <li><a id="inicio" href=""> Início</a></li>
-                <li><a id="criptoativos" href="">Criptoativos</a></li>
-                <li><a id="add-saldo" href="">Adicionar saldo</a></li>
-                <li><a id="sair" href="">Sair</a></li>
+                <li className="navbar-li"><a className="navbar-a" id="inicio" href=""> Início</a></li>
+                <li className="navbar-li"><a className="navbar-a" id="criptoativos" href="">Criptoativos</a></li>
+                <li className="navbar-li"><a className="navbar-a" id="add-saldo" href="">Adicionar saldo</a></li>
+                <li className="navbar-li"><a className="navbar-a" id="sair" href="">Sair</a></li>
 
             </ul>
         </nav>
