@@ -39,8 +39,7 @@
 }
 
 .btn-cancelar:hover {
-    background: rgb(255, 0, 0);
-    color: white;
+    background: #fef2f2;
     transition: 0.2s;
 }
 
@@ -73,8 +72,9 @@
 .btn-cancelar {
     padding: 12px 18px;
     border-radius: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ff0000;
     background: white;
+    color: #ff0000;
     cursor: pointer;
 }
 

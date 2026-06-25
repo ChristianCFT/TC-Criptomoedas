@@ -107,6 +107,7 @@
 
 .btn-cancelar:hover{
     background: #fef2f2;
+    transition: 0.2s;
 }
 
 .btn-adicionar{
