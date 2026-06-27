@@ -1,165 +1,108 @@
-.header-inicial{
+.header-inicial {
     background: white;
     border-bottom: 1px solid #e5e7eb;
     box-shadow: 0 2px 10px rgba(0,0,0,.05);
     padding: 1.5rem 2rem;
 }
 
-header h1{
+.header-inicial h1 {
     margin-bottom: 0.4rem;
     color: #1f2937;
 }
 
-header p{
+.header-inicial h1 span {
+    color: rgb(22 75 223); /* Destaque na cor principal */
+}
+
+.header-inicial p {
     color: #6b7280;
 }
 
-.main-inicial{
+.main-inicial {
     padding: 2rem;
+}
 
-    .area-informacoes{
-        display: flex;
-        gap: 2rem;
-        margin-bottom: 3rem;
+.area-informacoes {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
 
-        #patrimonio, #qtd-carteira{
-            flex: 1;
-            background: white;
-            border-radius: 18px;
-            padding: 1rem;
-            display: flex;
-            align-items: center;
-            box-shadow: 0 8px 25px rgba(0,0,0,.08);
-            transition: .3s;
+#patrimonio, #qtd-carteira {
+    flex: 1;
+    background: white;
+    border-radius: 18px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+    transition: .3s;
+}
 
-            img{
-                width: 75px;
-                height: 75px;
-                border-radius: 15px;
-                margin-right: 1rem;
-            }
-
-            .title{
-                color: #6b7280;
-                font-size: 0.8rem;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                margin-bottom: 0.4rem;
-            }
-
-            .valor{
-                font-size: 2rem;
-                font-weight: 700;
-                color: rgb(22 75 223);
-            }
-        }
-    }
-
-    #patrimonio:hover,#qtd-carteira:hover{
+#patrimonio:hover, #qtd-carteira:hover {
     transform: translateY(-5px);
-    }
+    box-shadow: 0 15px 35px rgba(0,0,0,.12);
+}
 
-    .area-carteiras{
-        display: flex;
-        flex-direction: column;
+#patrimonio img, #qtd-carteira img {
+    width: 75px;
+    height: 75px;
+    border-radius: 15px;
+    margin-right: 1rem;
+    object-fit: cover;
+}
 
-        .criar-carteira{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
+.area-informacoes .title {
+    color: #6b7280;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+}
 
-            div{
-                h2{
-                    color: #1f2937;
-                    margin-bottom: 0.3rem;
-                }
-                p{
-                    color: #6b7280;
-                }
-            }
+.area-informacoes .valor {
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(22 75 223);
+}
 
-            button{
-                width: 180px;
-                height: 50px;
-                border: none;
-                border-radius: 12px;
-                background-color: rgb(22 75 223);
-                color: white;
-                font-weight: 600;
-                font-size: medium;
-                cursor: pointer;
-                transition: .3s;
-                box-shadow: 0 8px 20px rgba(22,75,223,.3);
-            }
-        }
-        .criar-carteira button:hover{
-            transform: scale(1.05);
-        }
+.area-carteiras {
+    display: flex;
+    flex-direction: column;
+}
 
-        .carteiras{
-            display: grid;
-            grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
-            gap: 1.5rem;
+.criar-carteira {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
 
-            #card-carteira{
-                background: white;
-                border-radius: 18px;
-                padding: 1rem;
-                box-shadow: 0 8px 25px rgba(0,0,0,.08);
-                transition: 0.3s;
+.criar-carteira h2 {
+    color: #1f2937;
+    margin-bottom: 0.3rem;
+}
 
-                div:first-child{
-                    display: flex;
-                    align-items: center;
+.criar-carteira p {
+    color: #6b7280;
+}
 
-                    h3{
-                        color: #1f2937;
-                    }
-                }
+.criar-carteira button {
+    width: 180px;
+    height: 50px;
+    border: none;
+    border-radius: 12px;
+    background-color: rgb(22 75 223);
+    color: white;
+    font-weight: 600;
+    font-size: medium;
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 0 8px 20px rgba(22,75,223,.3);
+}
 
-                #info-saldo{
-                    margin: 1rem 0;
-
-                    #titulo-saldo{
-                        color: #6b7280;
-                        margin-bottom: .4rem;
-                    }
-                    #saldo{
-                        font-size: 1.4rem;
-                        font-weight: bold;
-                        color: rgb(22 75 223);
-                        
-                    }
-                }
-
-                img{
-                    width: 60px;
-                    height: 60px;
-                    border-radius: 15px;
-                    margin-right: 1rem;
-                }
-
-                button{
-                    width: 100%;
-                    height: 45px;
-                    border: none;
-                    border-radius: 10px;
-                    background: rgb(22 75 223);
-                    color: white;
-                    font-weight: 600;
-                    transition: .3s;
-                }
-
-                button:hover{
-                    background-color: #0a1c5a;
-                }
-
-            }
-            #card-carteira:hover{
-                transform: translateY(-5px);
-                box-shadow: 0 15px 35px rgba(0,0,0,.12);
-            }
-        }
-    }
+.criar-carteira button:hover {
+    transform: scale(1.05);
+    background-color: #0a1c5a;
 }

@@ -5,7 +5,7 @@ function Login(){
     return (
         <>
             <header className="header-login">
-                <img src={logo} alt="LogoCT" />
+                <img id="logo-img" src={logo} alt="LogoCT" />
             </header>
 
             <main className="main-login">
