@@ -1,14 +1,14 @@
 
 import './linhaAtivo.css'
 
-function LinhaAtivo({ moeda, sigla, quantidade, preco, total }) {
+function LinhaAtivo({ imagem, nome, sigla, quantidade, preco, total }) {
     return (
         <tr className="linha-ativo">
             <td className="coluna-cripto">
                 <div className="ativo-cripto">
-                    <img src="/logo-img/logo-2.jpeg" alt={moeda} />
+                    <img src={imagem} alt={nome} />
                     <div className="info-cripto">
-                        <p className="p-nome-moeda">{moeda}</p>
+                        <p className="p-nome-moeda">{nome}</p>
                         <p className="p-sigla-moeda">{sigla}</p>
                     </div>
                 </div>

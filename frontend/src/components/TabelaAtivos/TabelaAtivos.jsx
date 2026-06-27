@@ -1,13 +1,7 @@
 import LinhaAtivo from './LinhaAtivo';
 import './tabelaAtivos.css'
 
-export default function TabelaAtivos() {
-    // Simulando dados que viriam de uma API ou do estado (State) do React
-    const meusAtivos = [
-        { id: 1, moeda: "BitCoin", sigla: "BTC", quantidade: "0,1523", preco: "368.123,45", total: "56.023,87" },
-        { id: 2, moeda: "Ethereum", sigla: "ETH", quantidade: "2,5000", preco: "15.432,10", total: "38.580,25" }
-    ];
-
+export default function TabelaAtivos({ativos}) {
     return (
         <section id="secao-tabela-ativos">
             <table id="tabela-ativos">
@@ -22,9 +16,10 @@ export default function TabelaAtivos() {
                 </thead>
                 <tbody>
                     {/* O map percorre a lista e cria uma LinhaAtivo para cada moeda */}
-                    {meusAtivos.map((ativo) => (
+                    {ativos?.map((ativo) => (
                         <LinhaAtivo 
                             key={ativo.id} // O React exige uma 'key' única para itens em lista
+                            imagem={ativo.imagem}
                             moeda={ativo.moeda}
                             sigla={ativo.sigla}
                             quantidade={ativo.quantidade}
