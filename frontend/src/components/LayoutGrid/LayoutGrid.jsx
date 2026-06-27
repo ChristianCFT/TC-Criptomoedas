@@ -1,7 +1,7 @@
-import Footer from "./Footer";
-import Navbar from "./Navbar";
 import { Outlet } from "react-router-dom";
-import "../styles/layoutGrid.css"
+import "./layoutGrid.css"
+import Footer from "../Footer/Footer";
+import Navbar from "../Navbar/Navbar"
 
 
 function LayoutGrid(){

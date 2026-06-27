@@ -1,5 +1,5 @@
 import LinhaAtivo from './LinhaAtivo';
-import ''
+import './tabelaAtivos.css'
 
 export default function TabelaAtivos() {
     // Simulando dados que viriam de uma API ou do estado (State) do React

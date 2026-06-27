@@ -1,5 +1,5 @@
 // LinhaMercado.jsx
-import './LinhaAtivo.css'; // Você pode reaproveitar o mesmo CSS da linha da carteira!
+import '../TabelaAtivos/linhaAtivo.css'; // Você pode reaproveitar o mesmo CSS da linha da carteira!
 
 export default function LinhaMercado({ moeda, sigla, preco }) {
     return (

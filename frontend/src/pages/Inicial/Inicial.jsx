@@ -1,8 +1,6 @@
-import moeda from "../assets/images/moeda.jpg";
-import carteira from "../assets/images/carteira.jpg";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import "../styles/inicial.css"
+import moeda from "@/assets/images/moeda.jpg";
+import carteira from "@/assets/images/carteira.jpg";
+import "./inicial.css"
 
 function Inicial(){
     return (    

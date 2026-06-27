@@ -1,11 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import LayoutGrid from "./components/LayoutGrid";
+import Cadastro from "./pages/Cadastro/Cadastro";
+import Login from "./pages/Login/Login";
+import Carteira from "./pages/Carteira/Carteira";
+import Inicial from "./pages/Inicial/Inicial";
+import LayoutGrid from "./components/LayoutGrid/LayoutGrid";
 
-import Inicial from "./pages/Inicial";
-import Carteira from "./pages/Carteira";
-import Login from "./pages/Login";
-import Cadastro from "./pages/Cadastro";
+
 
 
 function App(){

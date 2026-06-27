@@ -1,7 +1,7 @@
-import "../styles/modalSaldo.css"
-import boleto from "../assets/images/boleto.png"
-import cartao from "../assets/images/cartao de credito.png"
-import pix from "../assets/images/pix.png"
+import "./modalSaldo.css"
+import boleto from "@/assets/images/boleto.png"
+import cartao from "@/assets/images/cartao de credito.png"
+import pix from "@/assets/images/pix.png"
 
 function ModalSaldo() {
     return (

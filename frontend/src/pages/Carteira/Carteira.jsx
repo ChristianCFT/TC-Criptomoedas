@@ -1,6 +1,6 @@
-import moeda from "../assets/images/moeda.jpg"
-import carteira from "../assets/images/carteira.jpg";
-import "../styles/carteira.css"
+import moeda from "@/assets/images/moeda.jpg"
+import carteira from "@/assets/images/carteira.jpg";
+import "./carteira.css"
 function Carteira() {
     return (
         <>

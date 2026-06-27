@@ -1,4 +1,4 @@
-import "../styles/modalCarteira.css"
+import "./modalCarteira.css"
 
 function ModalCarteira(){
     return(

@@ -1,5 +1,5 @@
 // TabelaMercado.jsx
-import './TabelaAtivos.css'; // Novamente, reaproveitando o CSS da estrutura da tabela
+import '../TabelaAtivos/tabelaAtivos.css'; // Novamente, reaproveitando o CSS da estrutura da tabela
 import LinhaMercado from './LinhaMercado';
 
 export default function TabelaMercado() {

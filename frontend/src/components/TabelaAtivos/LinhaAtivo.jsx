@@ -1,5 +1,5 @@
 
-
+import './linhaAtivo.css'
 
 function LinhaAtivo({ moeda, sigla, quantidade, preco, total }) {
     return (
