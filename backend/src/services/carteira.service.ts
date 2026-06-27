@@ -2,10 +2,13 @@ import { prisma } from "../prisma/client";
 
 export class CarteiraService {
 
-    async createCarteira(dados: {nome: string; usuarioId: number;}) {
+    async createCarteira(dados: {nome: string}, usuarioId: number) {
 
         const carteira = await prisma.carteira.create({
-            data: dados
+            data: {
+                ...dados,
+                usuarioId,
+            }
         });
         return carteira;
 
@@ -22,10 +25,13 @@ export class CarteiraService {
         return carteiras;
     }
 
-    async deleteCarteira(id: number){
+    async deleteCarteira(id: number, usuarioId: number){
         
         await prisma.carteira.delete({
-            where: {id}
+            where: {
+                id, 
+                usuarioId
+            }
         });
     }
 
