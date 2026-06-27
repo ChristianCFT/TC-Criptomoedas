@@ -5,6 +5,7 @@ import Login from "./pages/Login/Login";
 import Carteira from "./pages/Carteira/Carteira";
 import Inicial from "./pages/Inicial/Inicial";
 import LayoutGrid from "./components/LayoutGrid/LayoutGrid";
+import Criptoativos from "./pages/Criptoativos"
 
 
 
@@ -30,8 +31,18 @@ function App(){
                         element={<Carteira />}
                     />
 
+                    <Route
+                    path="/criptoativos"
+                    element={<Criptoativos />}
+                    />
+
                 </Route>
 
+                <Route
+                    path="/mercado"
+                    element={<Criptoativos />}
+                
+                />
 
                 {/* páginas sem layout */}
                 <Route 
