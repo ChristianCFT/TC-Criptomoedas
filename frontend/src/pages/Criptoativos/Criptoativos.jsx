@@ -1,4 +1,4 @@
-import "../styles/criptoativos.css"
+import "./criptoativos.css"
 import TabelaMercado from "@/components/TabelaMercado/TabelaMercado";
 
 function Criptoativos(){
