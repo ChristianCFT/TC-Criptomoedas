@@ -1,5 +1,6 @@
 // LinhaMercado.jsx
 import '../TabelaAtivos/linhaAtivo.css'; // Você pode reaproveitar o mesmo CSS da linha da carteira!
+import logo from "../../assets/logos/logo-2.jpeg"
 
 export default function LinhaMercado({ moeda, sigla, preco }) {
     return (
@@ -7,7 +8,7 @@ export default function LinhaMercado({ moeda, sigla, preco }) {
             <td className="coluna-cripto">
                 <div className="ativo-cripto">
                     {/* Mantemos a foto e os nomes */}
-                    <img src="/logo-img/logo-2.jpeg" alt={moeda} />
+                    <img src={logo.src} alt={moeda} />
                     <div className="info-cripto">
                         <p className="p-nome-moeda">{moeda}</p>
                         <p className="p-sigla-moeda">{sigla}</p>

@@ -90,7 +90,7 @@
 
 /* breakpoint */
 @media (max-width: 768px) {
-    .main-cadastro {
+    main {
         flex-direction: column;
     }
 
@@ -100,7 +100,9 @@
     }
 
     .layout-midia img {
-        width: 25%;
+        width: 20%;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
     }
 
     .layout-form {

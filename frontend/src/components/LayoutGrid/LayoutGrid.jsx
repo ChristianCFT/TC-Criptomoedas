@@ -1,29 +1,22 @@
-import { Outlet } from "react-router-dom";
-import "./layoutGrid.css"
+import "./layoutGrid.css";
 import Footer from "../Footer/Footer";
-import Navbar from "../Navbar/Navbar"
+import Navbar from "../Navbar/Navbar";
 
+function LayoutGrid({ children }) {
 
-function LayoutGrid(){
-
-    return(
-
+    return (
         <div className="layout">
 
-            <Navbar/>
+            <Navbar />
 
             <div className="content">
-
-                <Outlet />
-
+                {children}
             </div>
 
-            <Footer/>
+            <Footer />
 
         </div>
-
     );
-
 }
 
 export default LayoutGrid;

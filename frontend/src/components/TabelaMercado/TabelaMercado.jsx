@@ -2,7 +2,7 @@
 import '../TabelaAtivos/tabelaAtivos.css'; // Novamente, reaproveitando o CSS da estrutura da tabela
 import LinhaMercado from './LinhaMercado';
 
-export default function TabelaMercado(mercadoGlobal) {
+export default function TabelaMercado({ mercadoGlobal }) {
     return (
         <section id="secao-tabela-ativos">
             <table id="tabela-ativos">

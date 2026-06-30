@@ -1,11 +1,11 @@
-import logo from "@/assets/logos/logo-2.jpeg";
+import logo from "../../assets/logos/logo-2.jpeg";
 import "./login.css"
 
 function Login(){
     return (
         <>
             <header className="header-login">
-                <img id="logo-img" src={logo} alt="LogoCT" />
+                <img id="logo-img" src={logo.src} alt="LogoCT" />
             </header>
 
             <main className="main-login">

@@ -1,12 +1,12 @@
 import React from 'react';
 import './cardCarteira.css';
-import CarteiraImg from '@/assets/images/carteira.jpg'
+import CarteiraImg from "../../../src/assets/images/carteira.jpg";
 
 function CardCarteira({ titulo, saldo}){
     return (
         <div className="card-carteira">
             <div className="card-header">
-                <img src={CarteiraImg} alt='Carteira'/>
+                <img src={CarteiraImg.src} alt='Carteira'/>
                 <h3 className="titulo-carteira">{titulo}</h3>
             </div>
             <div className="info-saldo">

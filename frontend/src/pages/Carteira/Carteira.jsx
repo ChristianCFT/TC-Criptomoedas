@@ -1,7 +1,7 @@
 import React from 'react';
-import moeda from "@/assets/images/moeda.jpg"
-import carteira from "@/assets/images/carteira.jpg";
-import TabelaAtivos from "@/components/TabelaAtivos/TabelaAtivos";
+import moeda from "../../assets/images/moeda.jpg"
+import carteira from "../../assets/images/carteira.jpg";
+import TabelaAtivos from "../../components/TabelaAtivos/TabelaAtivos";
 import "./carteira.css"
 
 function Carteira() {
@@ -10,7 +10,7 @@ function Carteira() {
     { 
         id: 1, 
         imagem: "https://cryptologos.cc/logos/bitcoin-btc-logo.png", // Exemplo com URL
-        nome: "Bitcoin", 
+        moeda: "Bitcoin", 
         sigla: "BTC", 
         quantidade: 0.025, 
         preco: "345.000,00",
@@ -19,25 +19,25 @@ function Carteira() {
     { 
         id: 2, 
         imagem: "https://cryptologos.cc/logos/ethereum-eth-logo.png",
-        nome: "Ethereum", 
+        moeda: "Ethereum", 
         sigla: "ETH", 
         quantidade: 1.2, 
         preco: "18.500,00",
         total: "22.200,00"
     },
     { 
-        id: 1, 
+        id: 3, 
         imagem: "https://cryptologos.cc/logos/bitcoin-btc-logo.png", // Exemplo com URL
-        nome: "Bitcoin", 
+        moeda: "Bitcoin", 
         sigla: "BTC", 
         quantidade: 0.025, 
         preco: "345.000,00",
         total: "8.625,00"
     },
     { 
-        id: 1, 
+        id: 4, 
         imagem: "https://cryptologos.cc/logos/bitcoin-btc-logo.png", // Exemplo com URL
-        nome: "Bitcoin", 
+        moeda: "Bitcoin", 
         sigla: "BTC", 
         quantidade: 0.025, 
         preco: "345.000,00",
@@ -65,7 +65,7 @@ function Carteira() {
 
                     <div className="card-resumo">
                         <img 
-                            src={moeda} 
+                            src={moeda.src} 
                             alt="Moeda" 
                         />
                         <div>
@@ -80,7 +80,7 @@ function Carteira() {
 
                     <div className="card-resumo">
                         <img 
-                            src={carteira} 
+                            src={carteira.src} 
                             alt="Carteira" 
                         />
                         <div>

@@ -1,11 +1,11 @@
-import logo from "@/assets/logos/logo-2.jpeg"
+import logo from "../../assets/logos/logo-2.jpeg"
 import "./cadastro.css"
 
 function Cadastro(){
     return(
         <main className="main-cadastro">
             <div className="layout-midia">
-                <img src={logo} alt="LogoCT" />
+                <img src={logo.src} alt="LogoCT" />
             </div>
 
             <div className="layout-form">

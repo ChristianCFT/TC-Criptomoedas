@@ -1,4 +1,4 @@
-import logo from "@/assets/logos/logo-2.jpeg";
+import logo from "../../assets/logos/logo-2.jpeg";
 import "./navbar.css"
 
 function Navbar(){
@@ -6,7 +6,7 @@ function Navbar(){
         <nav className="navbar-container">
 
             <figure className="navbar-figure">
-                <img className="navbar-img" src={logo} alt="Logo TC" />
+                <img className="navbar-img" src={logo.src} alt="Logo TC" />
                 <figcaption className="navbar-figcaption">TC Criptomoedas</figcaption>
             </figure>
 

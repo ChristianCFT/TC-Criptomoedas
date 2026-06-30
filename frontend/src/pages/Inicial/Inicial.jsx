@@ -1,7 +1,7 @@
 import React from 'react';
-import moeda from "@/assets/images/moeda.jpg";
-import carteiraImg from "@/assets/images/carteira.jpg";
-import ListaCarteiras from "@/components/ListaCarteiras/ListaCarteiras"
+import moeda from "../../assets/images/moeda.jpg";
+import carteiraImg from "../../assets/images/carteira.jpg";
+import ListaCarteiras from '../../components/ListaCarteiras/ListaCarteiras.jsx';
 import "./inicial.css";
 
 
@@ -24,7 +24,7 @@ function Inicial(){
             <main className="main-inicial">
                 <div className="area-informacoes">
                     <div id="patrimonio">
-                        <img src={moeda} alt="Imagem Moeda" />
+                        <img src={moeda.src} alt="Imagem Moeda" />
                         <div>
                             <p className="title">Patrimônio total</p>
                             <p className="valor">R$ <span>9.999,99</span></p>
@@ -32,7 +32,7 @@ function Inicial(){
                     </div>
 
                     <div id="qtd-carteira">
-                        <img src={carteiraImg} alt="Imagem Carteira" />
+                        <img src={carteiraImg.src} alt="Imagem Carteira" />
                         <div>
                             <p className="title">Carteiras</p>
                             <p className="valor">{minhasCarteiras.length}</p>
