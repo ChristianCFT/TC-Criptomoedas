@@ -19,7 +19,7 @@ lerna-debug.log*
 .vscode/
 
 #next.js
-.next
+.next/
 out/
 
 # JetBrains
