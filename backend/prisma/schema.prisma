@@ -37,6 +37,7 @@ model Criptomoeda {
   nome            String
   simbolo         String           @unique
   precoAtual      Float
+  imagemUrl       String
   ativos          CarteiraCripto[]
   updatedAt       DateTime @updatedAt
 }
