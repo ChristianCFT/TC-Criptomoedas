@@ -1,5 +1,6 @@
 # Dependências
 node_modules/
+/generated/prisma
 
 # Logs
 *.log
