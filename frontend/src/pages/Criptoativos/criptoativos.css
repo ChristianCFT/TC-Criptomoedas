@@ -15,8 +15,6 @@
 }
 
 .main-criptoativos{
-    background-color: rgba(245, 245, 245, 0.877);
-    padding: 0 2rem;
     margin-top: 2rem;
 }
 
@@ -33,7 +31,7 @@
     overflow: hidden;        
 }
 
-#tabela-ativos thead{
+/* #tabela-ativos thead{
     background-color: #f8fafc;
 }
 
@@ -96,4 +94,4 @@
 .acoes-ativo{
     display: flex;
     gap: 0.5rem;
-}
+} */
