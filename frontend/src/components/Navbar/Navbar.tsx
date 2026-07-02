@@ -13,7 +13,7 @@ function Navbar(){
             await logout();
             toast.success("Logout realizado com sucesso!");
 
-            router.push("/login");
+            router.push("/");
             router.refresh();
         } catch(error){
             toast.error("Erro ao realizar logout!");

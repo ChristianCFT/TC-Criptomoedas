@@ -6,6 +6,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { create } from "../../services/auth.services";
+import { refresh } from "next/cache";
 
 function Cadastro(){
     const router = useRouter();
@@ -41,7 +42,8 @@ function Cadastro(){
                 senha
             });
             toast.success("Cadastro realizado com sucesso!");
-            router.push("/login");
+            router.push("/");
+            router.refresh();
         }catch(error){
             toast.error("Usuário ou senha inválidos");
         }

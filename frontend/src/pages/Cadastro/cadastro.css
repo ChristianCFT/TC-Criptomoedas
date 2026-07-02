@@ -25,10 +25,10 @@
         border-radius: 50%;
         transition: 0.3s;
     }
+}
 
-    img:hover{
-        transform: scale(1.05);
-    }
+img:hover{
+    transform: scale(1.05);
 }
 
 .form-container{
