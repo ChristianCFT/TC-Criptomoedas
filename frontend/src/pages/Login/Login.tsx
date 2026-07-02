@@ -36,7 +36,7 @@ function Login(){
                 senha
             });
             toast.success("Login realizado com sucesso!");
-            router.push("/");
+            router.push("/inicio");
             router.refresh();
             
         }catch(error){
