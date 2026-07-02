@@ -5,14 +5,16 @@ import { loginSchema } from "../../schemas/login.schema";
 import { useState } from "react";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
+import { login } from "../../services/auth.services";
 
 function Login(){
+    const router = useRouter();
+
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
 
     const handleSubmit = async (e: React.SyntheticEvent) =>{
-
-        const router = useRouter();
+        
         e.preventDefault();
 
         //validar os campos do formulário
@@ -34,7 +36,7 @@ function Login(){
                 senha
             });
             toast.success("Login realizado com sucesso!");
-            router.push("/login");
+            router.push("/");
             router.refresh();
             
         }catch(error){

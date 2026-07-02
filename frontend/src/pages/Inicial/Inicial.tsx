@@ -1,7 +1,7 @@
 import React from 'react';
 import moeda from "../../assets/images/moeda.jpg";
 import carteiraImg from "../../assets/images/carteira.jpg";
-import ListaCarteiras from '../../components/ListaCarteiras/ListaCarteiras.jsx';
+import ListaCarteiras from '../../components/ListaCarteiras/ListaCarteiras';
 import "./inicial.css";
 
 

@@ -1,21 +1,22 @@
 "use client"
-import e from "express";
 import logo from "../../assets/logos/logo-2.jpeg"
 import "./cadastro.css"
 import { cadastroSchema } from "../../schemas/cadastro.schema";
 import { useState } from "react";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
+import { create } from "../../services/auth.services";
 
 function Cadastro(){
+    const router = useRouter();
+    
     const [nome, setNome] = useState("");
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
     const [confirmarSenha, setConfirmarSenha] = useState("");
 
     const handleSubmit = async (e: React.SyntheticEvent) =>{
-
-        const router = useRouter();
+        
         e.preventDefault();
 
         //validar os campos do formulário
