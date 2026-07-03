@@ -80,7 +80,7 @@ function Login(){
 
                     </div>
 
-                    <a id="cadastrar" href="#">CADASTRE-SE AGORA MESMO</a>
+                    <button id="cadastrar" type="button" onClick={() => router.push("/cadastro")}>CADASTRE-SE AGORA MESMO</button>
 
                 </form>
 
