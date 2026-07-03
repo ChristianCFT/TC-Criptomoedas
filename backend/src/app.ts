@@ -3,7 +3,10 @@ import cors from "cors";
 import { usuarioRoutes } from "./routes/usuario.routes";
 import { carteiraRoutes } from "./routes/carteira.routes";
 import { authRoutes } from "./routes/auth.routes";
+import { visaoGeral } from "./routes/visaoGeral.routes";
 import cookieParser from "cookie-parser";
+
+
 
 const app = express();
 
@@ -17,5 +20,6 @@ app.use(cookieParser());
 app.use("/usuarios",usuarioRoutes);
 app.use("/carteiras",carteiraRoutes);
 app.use("/auth", authRoutes);
+app.use("/dashboard",visaoGeral)
 
 export { app };
