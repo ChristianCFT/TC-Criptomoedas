@@ -8,7 +8,7 @@ const carteiraController = new CarteiraController
 
 router.use(authMiddleware)
 router.post("/",carteiraController.create);
-router.get("/",carteiraController.findAllByUsuarioId);
 router.delete("/:id",carteiraController.delete);
+router.get("/:id", carteiraController.findById);
 
 export {router as carteiraRoutes}
