@@ -2,18 +2,20 @@ import { prisma } from "../prisma/client";
 
 export class UsuarioService {
 
-  async createUsuario(dados: {nome: string; email: string; senha: string;}) {
-
-    const usuario = await prisma.usuario.create({
-      data: dados
-    });
-    
-    return usuario;
+  async findUsuarioById(id: number) {
+    return await prisma.usuario.findUnique({where: {id}});
   }
 
-  async findUsuarioById(id: number) {
+  async adicionarSaldo(id: number, valor: number) {
+    const usuarioAtualizado = await prisma.usuario.update({
+      where: { id },
+      data: {
+        saldoBrl: {
+          increment: valor,
+        },
+      },
+    });
 
-    return await prisma.usuario.findUnique({where: {id}});
-
+    return usuarioAtualizado;
   }
 }
