@@ -1,23 +1,29 @@
-import React from 'react';
 import moeda from "../../assets/images/moeda.jpg";
 import carteiraImg from "../../assets/images/carteira.jpg";
 import ListaCarteiras from '../../components/ListaCarteiras/ListaCarteiras';
 import "./inicial.css";
+import { cookies } from 'next/headers';
+import { redirect } from 'next/navigation';
+import { getCarteiras } from '../../services/carteiras.services';
+import { me } from "../../services/auth.services";
 
+async function Inicial(){
 
+    const cookieStore = await cookies();
+    const token = cookieStore.get("token");
 
-function Inicial(){
-    const minhasCarteiras = [
-        { id: 1, titulo: "Carteira Principal", saldo: "5.430,00" },
-        { id: 2, titulo: "Reserva de Oportunidade", saldo: "1.200,50" },
-        { id: 3, titulo: "Hold Longo Prazo", saldo: "3.369,49" },
-        { id: 4, titulo: "Criptos Alternativas", saldo: "850,20" }
-    ];
+    if(!token){
+        redirect("/");
+    }
+
+    const cookieHeader = cookieStore.toString();
+    const carteiras = await getCarteiras(cookieHeader);
+    const usuario = await me(cookieHeader);
 
     return (    
         <>
             <header className="header-inicial">
-                <h1>Olá, <span>Usuário</span>!</h1>
+                <h1>Olá, <span>{usuario.nome}</span>!</h1>
                 <p>Bem-vindo de volta a TC Criptomoedas.</p>
             </header>
 
@@ -35,7 +41,7 @@ function Inicial(){
                         <img src={carteiraImg.src} alt="Imagem Carteira" />
                         <div>
                             <p className="title">Carteiras</p>
-                            <p className="valor">{minhasCarteiras.length}</p>
+                            <p className="valor">{carteiras.length}</p>
                         </div>
                     </div>
                 </div>
@@ -50,7 +56,7 @@ function Inicial(){
                     </div>
                     
                     
-                    <ListaCarteiras carteiras={minhasCarteiras} />
+                    <ListaCarteiras carteiras={carteiras} />
                     
                 </div> 
             </main> 
