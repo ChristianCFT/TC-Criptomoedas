@@ -11,4 +11,9 @@ export interface loginDTO{
 
 export interface loginResponse{
     token: string;
+    user:{
+        id: number;
+        nome: string;
+        email: string;
+    }
 }
