@@ -1,0 +1,63 @@
+### Cadastro
+POST http://localhost:3001/auth/create
+Content-Type: application/json
+
+{ 
+  "nome": "Nomeyeqeqeqyeq",
+  "email": "seucadastrado@teste.com",
+  "senha": "12345678"
+}
+
+### ==========================================
+
+### Fazer Login
+POST http://localhost:3001/auth/login
+Content-Type: application/json
+
+{
+  "email": "seu_email_cadastrado@teste.com",
+  "senha": "12345678"
+}
+
+### Retorna os dados do Usuario
+GET http://localhost:3001/usuarios/perfil
+
+### ==========================================
+
+### Fazer Logout
+POST  http://localhost:3001/auth/logout
+
+### ==========================================
+
+### Adicionar Saldo 
+POST http://localhost:3001/usuarios/saldo
+Content-Type: application/json
+
+{
+    "saldo": "2000"
+}
+
+### ==========================================
+
+### Busca os dados necessários para página Inicial
+GET http://localhost:3001/dashboard
+
+### Criar uma Nova Carteira
+# O seu carteira.service.ts espera receber apenas o "nome" no body.
+# O ID do usuário ele já pega sozinho pelo Token do login!
+POST http://localhost:3001/carteiras
+Content-Type: application/json
+
+{
+  "nome": "Carteira Principal"
+}
+
+### ==========================================
+
+### Buscar uma Carteira Específica
+GET http://localhost:3001/carteiras/12
+
+### ==========================================
+
+### Deletar uma Carteira
+DELETE http://localhost:3001/carteiras/14
