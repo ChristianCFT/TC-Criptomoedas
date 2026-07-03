@@ -24,6 +24,7 @@ export async function login(dados: loginDTO) : Promise<loginResponse>{
         headers:{
             "Content-Type": "application/json",
         },
+        credentials: "include",
         body: JSON.stringify(dados),
     });
 
@@ -46,3 +47,18 @@ export async function logout() : Promise<void>{
     }
 
 };
+
+export async function me(cookieHeader: string) {
+
+    const response = await fetch(`${API_URL}/auth/me`, {
+        headers: {
+            Cookie: cookieHeader,
+        },
+    });
+
+    if (!response.ok) {
+        throw new Error("Erro ao buscar usuário");
+    }
+
+    return response.json();
+}
