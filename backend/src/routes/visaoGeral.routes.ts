@@ -6,5 +6,7 @@ const router = Router()
 
 const visaoGeralController = new VisaoGeralController;
 
-router.get("/dashboard", authMiddleware, visaoGeralController.getVisaoGeral);
+router.get("/", authMiddleware, visaoGeralController.getVisaoGeral);
+
+export {router as visaoGeral}
 

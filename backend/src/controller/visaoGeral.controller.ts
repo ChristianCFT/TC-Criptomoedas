@@ -14,6 +14,7 @@ export class VisaoGeralController{
             const dados = await visaoGeralService.getDadosTelaInicial(userId);
             
             res.status(200).json(dados);
+            
         } catch (error) {
             res.status(500).json({ error: "Erro ao carregar Dados" });
         }
