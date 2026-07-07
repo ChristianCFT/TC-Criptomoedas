@@ -53,4 +53,8 @@ export class AuthController {
             message: "logout realizado com sucesso!"
         })
     }
+
+    async me(req: Request, res: Response) {
+        res.json(res.locals.user);
+    }
 }
