@@ -20,7 +20,7 @@ export async function create(dados: CreateCarteiraDTO): Promise<void> {
 
 export async function getDashboard(cookie?: string): Promise<DashboardDTO> {
 
-    const response = await fetch(`${API_URL}/visao-geral/dashboard`, {
+    const response = await fetch(`${API_URL}/dashboard`, {
         headers: {
             Cookie: cookie ?? "",
         },
