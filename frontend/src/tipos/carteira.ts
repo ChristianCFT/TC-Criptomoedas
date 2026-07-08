@@ -1,6 +1,5 @@
 export interface CreateCarteiraDTO {
     nome: string;
-    saldo: number;
 }
 
 export interface CarteiraDTO {
@@ -8,4 +7,11 @@ export interface CarteiraDTO {
     nome: string;
     saldo: number;
     usuarioId: number;
+}
+
+export interface DashboardDTO {
+    nome: string;
+    patrimonioTotal: number;
+    quantidadeCarteiras: number;
+    carteiras: CarteiraDTO[];
 }
