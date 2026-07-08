@@ -5,10 +5,42 @@ function Criptoativos(){
 
     // Simulando os dados do mercado global (todas as moedas disponíveis)
     const mercadoGlobal = [
-        { id: 1, moeda: "BitCoin", sigla: "BTC", preco: "368.123,45" },
-        { id: 2, moeda: "Ethereum", sigla: "ETH", preco: "15.432,10" },
-        { id: 3, moeda: "Solana", sigla: "SOL", preco: "520,00" },
-        { id: 4, moeda: "Cardano", sigla: "ADA", preco: "2,45" }
+        { 
+            id: 1, 
+            nome: "BitCoin", 
+            sigla: "BTC", 
+            preco: "368.123,45",
+            variacao24h: 2.35, 
+            marketCap: "7.150.000.000.000,00",
+            imagemUrl: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png"
+        },
+        { 
+            id: 2, 
+            nome: "Ethereum", 
+            sigla: "ETH", 
+            preco: "15.432,10",
+            variacao24h: -1.12, 
+            marketCap: "1.850.000.000.000,00",
+            imagemUrl: "https://assets.coingecko.com/coins/images/279/large/ethereum.png"
+        },
+        { 
+            id: 3, 
+            nome: "Solana", 
+            sigla: "SOL", 
+            preco: "520,00",
+            variacao24h: 5.80, 
+            marketCap: "235.000.000.000,00",
+            imagemUrl: "https://assets.coingecko.com/coins/images/4128/large/solana.png"
+        },
+        { 
+            id: 4, 
+            nome: "Cardano", 
+            sigla: "ADA", 
+            preco: "2,45",
+            variacao24h: -0.45, 
+            marketCap: "85.000.000.000,00",
+            imagemUrl: "https://assets.coingecko.com/coins/images/975/large/cardano.png"
+        }
     ];
 
 

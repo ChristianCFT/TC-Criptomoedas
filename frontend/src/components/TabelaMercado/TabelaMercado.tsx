@@ -1,5 +1,4 @@
-// TabelaMercado.jsx
-import '../TabelaAtivos/tabelaAtivos.css'; // Novamente, reaproveitando o CSS da estrutura da tabela
+import '../TabelaAtivos/tabelaAtivos.css';
 import LinhaMercado from './LinhaMercado';
 
 export default function TabelaMercado({ mercadoGlobal }) {
@@ -7,26 +6,29 @@ export default function TabelaMercado({ mercadoGlobal }) {
         <section id="secao-tabela-ativos">
             <table id="tabela-ativos">
                 
-                {/* Cabeçalho simplificado */}
                 <thead>
                     <tr>
                         <th>Criptomoeda</th>
                         <th>Preço Atual</th>
+                        <th>Variação (24h)</th>
+                        <th>Cap. de Mercado</th>
                     </tr>
                 </thead>
 
-                {/* Corpo da tabela usando o .map() para desenhar as linhas do mercado */}
                 <tbody>
                     {mercadoGlobal?.map((cripto) => (
                         <LinhaMercado 
                             key={cripto.id}
-                            moeda={cripto.moeda}
+                            nome={cripto.nome}
                             sigla={cripto.sigla}
                             preco={cripto.preco}
+                            variacao24h={cripto.variacao24h || 0} 
+                            marketCap={cripto.marketCap || 0}
+                            imagemUrl={cripto.imagemUrl}
                         />
                     ))}
                 </tbody>
-                
+
             </table>
         </section>
     );
