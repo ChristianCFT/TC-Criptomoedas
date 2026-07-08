@@ -8,8 +8,9 @@ function ListaCarteiras({ carteiras }) {
             {carteiras?.map((carteira) => (
                 <CardCarteira 
                     key={carteira.id} 
-                    titulo={carteira.titulo} 
-                    saldo={carteira.saldo} 
+                    id={carteira.id}
+                    titulo={carteira.nome} 
+                    saldo={carteira.saldoTotal} 
                 />
             ))}
         </div>
