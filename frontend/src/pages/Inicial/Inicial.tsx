@@ -19,12 +19,12 @@ async function Inicial(){
 
     const cookieHeader = cookieStore.toString();
     const dashboard = await getDashboard(cookieHeader);
-    //const usuario = await me(cookieHeader);
+    const usuario = await me(cookieHeader);
 
     return (    
         <>
             <header className="header-inicial">
-                {/* <h1>Olá, <span>{usuario.nome}</span>!</h1> */}
+                <h1>Olá, <span>{usuario.nome}</span>!</h1>
                 <p>Bem-vindo de volta a TC Criptomoedas.</p>
             </header>
 
