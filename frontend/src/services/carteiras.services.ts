@@ -1,4 +1,4 @@
-import { CarteiraDTO, CreateCarteiraDTO } from "../tipos/carteira";
+import { CarteiraDTO, CreateCarteiraDTO, DashboardDTO } from "../tipos/carteira";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
@@ -18,39 +18,19 @@ export async function create(dados: CreateCarteiraDTO): Promise<void> {
     }
 }
 
-export async function getCarteiras(cookie?: string): Promise<CarteiraDTO[]> {
+export async function getDashboard(cookie?: string): Promise<DashboardDTO> {
 
-    const response = await fetch(`${API_URL}/carteiras`, {
-        method: "GET",
+    const response = await fetch(`${API_URL}/visao-geral/dashboard`, {
         headers: {
-         "Cookie": cookie ?? "",
-        }
+            Cookie: cookie ?? "",
+        },
     });
 
     if (!response.ok) {
-        throw new Error("Erro ao buscar carteiras.");
+        throw new Error("Erro ao buscar dashboard.");
     }
 
-    const dados = await response.json();
-    return dados;
-}
-
-
-export async function getCarteira(id: number, cookie?: string): Promise<CarteiraDTO> {
-
-    const response = await fetch(`${API_URL}/carteiras/${id}`, {
-        method: "GET",
-        headers: {
-            "Cookie": cookie ?? "",
-        }
-    });
-
-    if (!response.ok) {
-        throw new Error("Erro ao buscar carteira.");
-    }
-
-    const dados = await response.json();
-    return dados;
+    return response.json();
 }
 
 export async function remove(id: number): Promise<void> {
