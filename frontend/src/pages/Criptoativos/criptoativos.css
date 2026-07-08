@@ -24,11 +24,12 @@
     width: 100%;
 }
 #secao-tabela-ativos{
-    width: 60%;
+    width: 80%;
     
     border-collapse: separate;
     border-spacing: 0;       
-    overflow: hidden;        
+    overflow: hidden;   
+    margin-bottom: 3rem;     
 }
 
 /* #tabela-ativos thead{
