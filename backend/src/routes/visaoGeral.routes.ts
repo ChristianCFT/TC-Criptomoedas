@@ -8,5 +8,5 @@ const visaoGeralController = new VisaoGeralController;
 
 router.get("/", authMiddleware, visaoGeralController.getVisaoGeral);
 
-export {router as visaoGeral}
+export {router as visaoGeralRoutes}
 
