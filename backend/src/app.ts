@@ -5,6 +5,9 @@ import { carteiraRoutes } from "./routes/carteira.routes";
 import { authRoutes } from "./routes/auth.routes";
 import { visaoGeral } from "./routes/visaoGeral.routes";
 import cookieParser from "cookie-parser";
+import { compraRoutes } from "./routes/compra.routes";
+import { vendaRoutes } from "./routes/venda.routes";
+import { moedaRoutes } from "./routes/moeda.routes";
 
 
 
@@ -20,6 +23,9 @@ app.use(cookieParser());
 app.use("/usuarios",usuarioRoutes);
 app.use("/carteiras",carteiraRoutes);
 app.use("/auth", authRoutes);
-app.use("/dashboard",visaoGeral)
+app.use("/dashboard",visaoGeral);
+app.use("/compras",compraRoutes);
+app.use("/vendas",vendaRoutes);
+app.use("/moedas",moedaRoutes)
 
 export { app };
