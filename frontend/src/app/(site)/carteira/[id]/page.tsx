@@ -1,4 +1,6 @@
+import { cookies } from "next/dist/server/request/cookies";
 import Carteira from "../../../../pages/Carteira/Carteira";
+import { buscarCarteiraPorId } from "../../../../services/carteiras.services";
 
 interface PageProps {
     params: Promise<{
@@ -9,5 +11,10 @@ interface PageProps {
 export default async function Page({ params }: PageProps) {
     const { id } = await params;
 
-    return <Carteira id={Number(id)} />;
+    const cookieStore = await cookies();
+    const cookieHeader = cookieStore.toString();
+
+    const carteira = await buscarCarteiraPorId(Number(id), cookieHeader);
+
+    return <Carteira carteira={carteira} />;
 }
