@@ -38,6 +38,8 @@ model Criptomoeda {
   simbolo         String           @unique
   precoAtual      Float
   imagemUrl       String
+  variacao24h     Float   
+  marketCap       Float  
   ativos          CarteiraCripto[]
   updatedAt       DateTime @updatedAt
 }
@@ -51,7 +53,6 @@ model CarteiraCripto {
   carteira    Carteira     @relation(fields: [carteiraId], references: [id])
   cripto      Criptomoeda  @relation(fields: [criptoId], references: [id])
   quantidade          Float
-  precoMedioCompra    Float
   createdAt DateTime @default(now())
   @@unique([carteiraId, criptoId])
 

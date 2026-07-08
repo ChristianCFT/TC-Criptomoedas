@@ -3,8 +3,8 @@ POST http://localhost:3001/auth/create
 Content-Type: application/json
 
 { 
-  "nome": "Nomeyeqeqeqyeq",
-  "email": "seucadastrado@teste.com",
+  "nome": "Thiago Amaral",
+  "email": "amaralthiago@gmail.com",
   "senha": "12345678"
 }
 
@@ -15,7 +15,7 @@ POST http://localhost:3001/auth/login
 Content-Type: application/json
 
 {
-  "email": "seu_email_cadastrado@teste.com",
+  "email": "amaralthiago@gmail.com",
   "senha": "12345678"
 }
 
@@ -28,6 +28,35 @@ GET http://localhost:3001/usuarios/perfil
 POST  http://localhost:3001/auth/logout
 
 ### ==========================================
+
+### 2. COMPRAR CRIPTOMOEDA
+# Troque o carteiraId e criptoId por IDs que existam no seu banco
+POST http://localhost:3001/compras
+Content-Type: application/json
+
+{
+  "carteiraId": 1,
+  "criptoId": 1,
+  "valorCompraBrl": 1500.00
+}
+
+### ---------------------------------------------------
+
+### 2. Vender Criptomoeda (Por Quantidade)
+# Altere os IDs e a quantidade para testar
+POST http://localhost:3001/vendas
+Content-Type: application/json
+
+{
+  "carteiraId": 1,
+  "criptoId": 6,
+  "quantidade": 3
+}
+
+### ==========================================
+
+### Buscar todas as crptomoedas do banco de dados
+GET http://localhost:3001/moedas
 
 ### Adicionar Saldo 
 POST http://localhost:3001/usuarios/saldo
@@ -42,9 +71,9 @@ Content-Type: application/json
 ### Busca os dados necessários para página Inicial
 GET http://localhost:3001/dashboard
 
+### ==========================================
+
 ### Criar uma Nova Carteira
-# O seu carteira.service.ts espera receber apenas o "nome" no body.
-# O ID do usuário ele já pega sozinho pelo Token do login!
 POST http://localhost:3001/carteiras
 Content-Type: application/json
 
@@ -55,7 +84,7 @@ Content-Type: application/json
 ### ==========================================
 
 ### Buscar uma Carteira Específica
-GET http://localhost:3001/carteiras/12
+GET http://localhost:3001/carteiras/1
 
 ### ==========================================
 
