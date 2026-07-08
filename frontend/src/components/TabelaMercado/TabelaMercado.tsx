@@ -20,8 +20,8 @@ export default function TabelaMercado({ mercadoGlobal }) {
                         <LinhaMercado 
                             key={cripto.id}
                             nome={cripto.nome}
-                            sigla={cripto.sigla}
-                            preco={cripto.preco}
+                            sigla={cripto.simbolo}
+                            preco={cripto.precoAtual}
                             variacao24h={cripto.variacao24h || 0} 
                             marketCap={cripto.marketCap || 0}
                             imagemUrl={cripto.imagemUrl}

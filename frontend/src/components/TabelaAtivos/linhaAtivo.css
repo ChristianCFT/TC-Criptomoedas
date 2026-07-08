@@ -78,3 +78,13 @@
     background: #fef2f2;
     transform: scale(1.05);
 }
+
+.cor-positiva {
+    color: #16a34a;
+    font-weight: 600;
+}
+
+.cor-negativa {
+    color: #dc2626;
+    font-weight: 600;
+}
