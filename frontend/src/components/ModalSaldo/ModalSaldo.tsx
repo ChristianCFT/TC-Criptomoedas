@@ -5,25 +5,31 @@ import "./modalSaldo.css";
 import boleto from "../../assets/images/boleto.png";
 import cartao from "../../assets/images/cartao de credito.png";
 import pix from "../../assets/images/pix.png";
+import { adicionarSaldo } from "../../services/usuario.services";
+import { toast } from "sonner";
 
 function ModalSaldo({ fechar }) {
 
     const [valor, setValor] = useState("");
     const [metodoPagamento, setMetodoPagamento] = useState("");
 
-    async function adicionarSaldo() {
+    async function adicionarSaldoUsuario() {
 
         if (valor.trim() === "") {
-            alert("Digite um valor.");
+            toast.error("Digite um valor.");
             return;
         }
 
         if (metodoPagamento === "") {
-            alert("Selecione um método de pagamento.");
+            toast.error("Selecione um método de pagamento.");
             return;
         }
 
-        // Aqui depois vamos chamar a API
+        await adicionarSaldo({
+            saldo: Number(valor),
+        });
+
+        toast.success("Saldo adicionado com sucesso!");
 
         setValor("");
         setMetodoPagamento("");
@@ -129,7 +135,7 @@ function ModalSaldo({ fechar }) {
 
                     <button
                         className="btn-adicionar"
-                        onClick={adicionarSaldo}
+                        onClick={adicionarSaldoUsuario}
                     >
                         Adicionar saldo
                     </button>
