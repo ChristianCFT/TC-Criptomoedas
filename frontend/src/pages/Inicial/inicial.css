@@ -88,7 +88,7 @@
     color: #6b7280;
 }
 
-.criar-carteira button {
+.criar-carteira #criarCarteira {
     width: 180px;
     height: 50px;
     border: none;
@@ -102,7 +102,7 @@
     box-shadow: 0 8px 20px rgba(22,75,223,.3);
 }
 
-.criar-carteira button:hover {
+.criar-carteira #criarCarteira:hover {
     transform: scale(1.05);
     background-color: #0a1c5a;
 }

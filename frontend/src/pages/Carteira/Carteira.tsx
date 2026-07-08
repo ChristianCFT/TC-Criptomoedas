@@ -4,7 +4,11 @@ import carteira from "../../assets/images/carteira.jpg";
 import TabelaAtivos from "../../components/TabelaAtivos/TabelaAtivos";
 import "./carteira.css"
 
-function Carteira() {
+interface CarteiraProps {
+    id: number;
+}
+
+function Carteira({ id }: CarteiraProps) {
     // exemplo
    const meusAtivos = [
     { 

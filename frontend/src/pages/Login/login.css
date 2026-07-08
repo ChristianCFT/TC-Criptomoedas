@@ -2,6 +2,11 @@
     margin: 1.5rem;
     width: 6rem;
     border-radius: 100%;
+    transition: .3s;
+}
+
+#logo-img:hover{
+    transform: scale(1.05);
 }
 .header-login, .main-login{
     display: flex;
@@ -41,11 +46,13 @@ form{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 #acessar{
     background-color: black;
-    border-radius: 0.5rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
     color: white;
     align-items: center;
     width: 100%;
@@ -58,25 +65,32 @@ form{
 .container-principal{
     display: flex;
     flex-direction: column;
-    width: 23%;
+    width: 30%;
     height: 25rem;
     align-items: center;
-    border-radius: 0.5rem;
+    border-radius: 2rem;
     background-color: white;
 }
 
 #cadastrar{
     margin: 1rem;
-    color: blue;
+    color: rgb(22 75 223);
     text-decoration: none;
     font-weight: bold;
+    font-size: medium;
     text-align: center;
     display: inline-block;
+    background-color: transparent;
+    border: none;
+}
+
+#cadastrar:hover{
+    color: #0a1c5a;
 }
 
 #esqueci-senha{
     margin-top: 1rem;
-    color: blue;
+    color: rgb(22 75 223);
     text-decoration: none;
     font-size: small;
 }
@@ -86,10 +100,17 @@ form{
     width: 12rem;;
     border-radius: 1.5rem;
     border: none;
-    background-color: blue;
+    background-color: rgb(22 75 223);
     color: white;
     margin-top: 2.5rem;
     font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-login:hover{
+    transform: scale(1.05);
+    background-color: #0a1c5a;
 }
 
 @media (max-width: 990px){
