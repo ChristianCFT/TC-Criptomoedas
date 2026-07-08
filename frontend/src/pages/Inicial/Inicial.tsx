@@ -4,8 +4,9 @@ import ListaCarteiras from '../../components/ListaCarteiras/ListaCarteiras';
 import "./inicial.css";
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
-import { getCarteiras } from '../../services/carteiras.services';
 import { me } from "../../services/auth.services";
+import ModalCarteira from "../../components/ModalCarteira/ModalCarteira";
+import { getDashboard } from "../../services/carteiras.services";
 
 async function Inicial(){
 
@@ -17,13 +18,13 @@ async function Inicial(){
     }
 
     const cookieHeader = cookieStore.toString();
-    const carteiras = await getCarteiras(cookieHeader);
-    const usuario = await me(cookieHeader);
+    const dashboard = await getDashboard(cookieHeader);
+    //const usuario = await me(cookieHeader);
 
     return (    
         <>
             <header className="header-inicial">
-                <h1>Olá, <span>{usuario.nome}</span>!</h1>
+                {/* <h1>Olá, <span>{usuario.nome}</span>!</h1> */}
                 <p>Bem-vindo de volta a TC Criptomoedas.</p>
             </header>
 
@@ -33,7 +34,7 @@ async function Inicial(){
                         <img src={moeda.src} alt="Imagem Moeda" />
                         <div>
                             <p className="title">Patrimônio total</p>
-                            <p className="valor">R$ <span>9.999,99</span></p>
+                            <p className="valor">R$ <span>{dashboard.patrimonioTotal.toFixed(2)}</span></p>
                         </div>
                     </div>
 
@@ -41,7 +42,7 @@ async function Inicial(){
                         <img src={carteiraImg.src} alt="Imagem Carteira" />
                         <div>
                             <p className="title">Carteiras</p>
-                            <p className="valor">{carteiras.length}</p>
+                            <p className="valor">{dashboard.quantidadeCarteiras}</p>
                         </div>
                     </div>
                 </div>
@@ -52,11 +53,13 @@ async function Inicial(){
                             <h2>Minhas carteiras</h2>
                             <p>Acesse e gerencie suas carteiras.</p>
                         </div>
-                        <button>+ Criar carteira</button>
+
+                        <ModalCarteira />
+
                     </div>
                     
                     
-                    <ListaCarteiras carteiras={carteiras} />
+                    <ListaCarteiras carteiras={dashboard.carteiras} />
                     
                 </div> 
             </main> 
