@@ -1,60 +1,23 @@
+"use client";
 import React from 'react';
 import moeda from "../../assets/images/moeda.jpg"
-import carteira from "../../assets/images/carteira.jpg";
+import carteiraIMG from "../../assets/images/carteira.jpg";
 import TabelaAtivos from "../../components/TabelaAtivos/TabelaAtivos";
 import "./carteira.css"
+import { CarteiraDTO } from '../../tipos/carteira';
 
 interface CarteiraProps {
-    id: number;
+    carteira: CarteiraDTO;
 }
 
-function Carteira({ id }: CarteiraProps) {
-    // exemplo
-   const meusAtivos = [
-    { 
-        id: 1, 
-        imagem: "https://cryptologos.cc/logos/bitcoin-btc-logo.png", // Exemplo com URL
-        moeda: "Bitcoin", 
-        sigla: "BTC", 
-        quantidade: 0.025, 
-        preco: "345.000,00",
-        total: "8.625,00"
-    },
-    { 
-        id: 2, 
-        imagem: "https://cryptologos.cc/logos/ethereum-eth-logo.png",
-        moeda: "Ethereum", 
-        sigla: "ETH", 
-        quantidade: 1.2, 
-        preco: "18.500,00",
-        total: "22.200,00"
-    },
-    { 
-        id: 3, 
-        imagem: "https://cryptologos.cc/logos/bitcoin-btc-logo.png", // Exemplo com URL
-        moeda: "Bitcoin", 
-        sigla: "BTC", 
-        quantidade: 0.025, 
-        preco: "345.000,00",
-        total: "8.625,00"
-    },
-    { 
-        id: 4, 
-        imagem: "https://cryptologos.cc/logos/bitcoin-btc-logo.png", // Exemplo com URL
-        moeda: "Bitcoin", 
-        sigla: "BTC", 
-        quantidade: 0.025, 
-        preco: "345.000,00",
-        total: "8.625,00"
-    }
-];
+function Carteira({ carteira }: CarteiraProps) {
 
     return (
         <>
             {/* Cabeçalho */}
             <header className="header-carteira">
                 <h1>
-                    <span>Nome da Carteira</span>
+                    <span>{carteira.nome}</span>
                 </h1>
                 <p>
                     Gerencie seus ativos e acompanhe seu desempenho
@@ -77,14 +40,14 @@ function Carteira({ id }: CarteiraProps) {
                                 SALDO TOTAL DA CARTEIRA
                             </h3>
                             <p className="valor-card-resumo">
-                                R$ <span>7399,99</span>
+                                R$ <span>{Number(carteira.saldo ?? 0).toFixed(2)}</span>
                             </p>
                         </div>
                     </div>
 
                     <div className="card-resumo">
                         <img 
-                            src={carteira.src} 
+                            src={carteiraIMG.src} 
                             alt="Carteira" 
                         />
                         <div>
@@ -93,7 +56,7 @@ function Carteira({ id }: CarteiraProps) {
                             </h3>
 
                             <p className="valor-card-resumo">
-                                <span>{meusAtivos.length}</span>
+                                <span>{carteira.ativos?.length || 0}</span>
                             </p>
                             <p id="p-dif">
                                 Ativos diferentes
@@ -125,7 +88,7 @@ function Carteira({ id }: CarteiraProps) {
                     </section>
 
                     {/* Tabela */}
-                    <TabelaAtivos ativos={meusAtivos} />
+                    <TabelaAtivos ativos={carteira.ativos} />
                     
 
                 </section>
