@@ -6,7 +6,8 @@ import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { me } from "../../services/auth.services";
 import ModalCarteira from "../../components/ModalCarteira/ModalCarteira";
-import { getDashboard } from "../../services/carteiras.services";
+import { getDashboard } from "../../services/dashboard.services";
+
 
 async function Inicial(){
 
