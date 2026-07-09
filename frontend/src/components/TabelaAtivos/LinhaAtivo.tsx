@@ -1,7 +1,7 @@
 
 import './linhaAtivo.css'
 
-function LinhaAtivo({ imagem, nome, sigla, quantidade, preco, total }) {
+function LinhaAtivo({ imagem, nome, sigla, quantidade, preco, total, abrirModal, abrirModalVenda}) {
     return (
         <tr className="linha-ativo">
             <td className="coluna-cripto">
@@ -18,8 +18,8 @@ function LinhaAtivo({ imagem, nome, sigla, quantidade, preco, total }) {
             <td className="coluna-valor-total">R$ {Number(total).toFixed(2)}</td>
             <td className="coluna-acoes">
                 <div className="acoes-ativo">
-                    <button className="btn-comprar">Comprar</button>
-                    <button className="btn-vender">Vender</button>
+                    <button className="btn-comprar" onClick={abrirModal}>Comprar</button>
+                    <button className="btn-vender" onClick={abrirModalVenda}>Vender</button>
                 </div>
             </td>
         </tr>

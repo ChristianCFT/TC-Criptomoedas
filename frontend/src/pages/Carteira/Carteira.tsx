@@ -11,9 +11,10 @@ import SaldoConta from '../../components/SaldoConta/SaldoConta';
 
 interface CarteiraProps {
     carteira: CarteiraDTO;
+    carteiraId: string;
 }
 
-function Carteira({ carteira }: CarteiraProps) {
+function Carteira({ carteira , carteiraId}: CarteiraProps) {
     const router = useRouter();
     
     // Criamos um estado local apenas para segurar o saldo
@@ -118,7 +119,7 @@ function Carteira({ carteira }: CarteiraProps) {
                     </section>
 
                     {/* Tabela */}
-                    <TabelaAtivos ativos={carteira.ativos} />
+                    <TabelaAtivos ativos={carteira.ativos} carteiraId={carteira.id}/>
                     
 
                 </section>

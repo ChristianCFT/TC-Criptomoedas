@@ -2,12 +2,15 @@
 
 import { useState } from "react";
 import "./modalVenderMoeda.css";
+import { venderCriptomoeda } from "../../services/venda.services";
 
 interface ModalVenderMoedaProps {
     fechar: () => void;
+    cripto: any,
+    carteiraId: number,
 }
 
-function ModalVenderMoeda({ fechar }: ModalVenderMoedaProps) {
+function ModalVenderMoeda({ fechar , cripto, carteiraId}: ModalVenderMoedaProps) {
 
     const [quantidade, setQuantidade] = useState("");
 
@@ -20,8 +23,11 @@ function ModalVenderMoeda({ fechar }: ModalVenderMoedaProps) {
 
         try {
 
-            // Aqui ficará a chamada da API
-            console.log("Vender moeda:", quantidade);
+            await venderCriptomoeda({
+                carteiraId: carteiraId,
+                criptoId: cripto.id,
+                quantidade: Number(quantidade)
+            });
 
             setQuantidade("");
             fechar();
@@ -42,7 +48,7 @@ function ModalVenderMoeda({ fechar }: ModalVenderMoedaProps) {
 
                 <div className="modal-header">
 
-                    <h2>Vender moeda</h2>
+                    <h2>Vender {cripto?.nome}</h2>
 
                     <button
                         className="btn-fechar"
