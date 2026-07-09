@@ -18,13 +18,13 @@ export default function TabelaAtivos({ativos}) {
                     {/* O map percorre a lista e cria uma LinhaAtivo para cada moeda */}
                     {ativos?.map((ativo) => (
                         <LinhaAtivo 
-                            key={ativo.id} // O React exige uma 'key' única para itens em lista
-                            imagem={ativo.imagem}
-                            moeda={ativo.moeda}
-                            sigla={ativo.sigla}
+                            key={ativo.id}
+                            nome={ativo.nome}
+                            sigla={ativo.simbolo}
+                            preco={ativo.precoAtual}
+                            imagem={ativo.imagemUrl}
                             quantidade={ativo.quantidade}
-                            preco={ativo.preco}
-                            total={ativo.total}
+                            total={ativo.valorTotal}
                         />
                     ))}
                 </tbody>

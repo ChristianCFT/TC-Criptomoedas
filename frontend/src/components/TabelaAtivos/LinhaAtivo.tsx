@@ -13,9 +13,9 @@ function LinhaAtivo({ imagem, nome, sigla, quantidade, preco, total }) {
                     </div>
                 </div>
             </td>
-            <td className="coluna-quantidade">{quantidade} {sigla}</td>
-            <td className="coluna-preco">R$ {preco}</td>
-            <td className="coluna-valor-total">R$ {total}</td>
+            <td className="coluna-quantidade">{Number(quantidade).toFixed(4)}</td>
+            <td className="coluna-preco">R$ {Number(preco).toFixed(2)}</td>
+            <td className="coluna-valor-total">R$ {Number(total).toFixed(2)}</td>
             <td className="coluna-acoes">
                 <div className="acoes-ativo">
                     <button className="btn-comprar">Comprar</button>
