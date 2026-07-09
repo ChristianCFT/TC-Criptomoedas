@@ -24,32 +24,35 @@ function Criptoativos({moedas}: CriptoativosProps) {
     
     // const cookieHeader = cookieStore.toString();
     // const usuario = await me(cookieHeader);
-
     const [saldoBrl, setSaldoBrl] = useState<number>(0);
-    // O useEffect faz a busca do saldo assim que a página monta na tela, sem travar o Next
-    useEffect(() => {
-        async function carregarSaldo() {
-            try {
-                // Como está no cliente, o axios/fetch já envia os cookies do navegador automaticamente!
-                // Não precisa passar 'cookieHeader' nem 'cookieStore' por parâmetro.
-                const usuarioPerfil = await buscarPerfil(); 
-                if (usuarioPerfil && usuarioPerfil.saldoBrl !== undefined) {
-                    setSaldoBrl(usuarioPerfil.saldoBrl);
+    const [nomeUsuario, setNomeUsuario] = useState<string>("Investidor");
 
+    useEffect(() => {
+        async function carregarPerfil() {
+            try {
+                const usuarioPerfil = await buscarPerfil(); 
+                if (usuarioPerfil) {
+
+                    if (usuarioPerfil.saldoBrl !== undefined) {
+                        setSaldoBrl(usuarioPerfil.saldoBrl);
+                    }
+                    if (usuarioPerfil.nome) {
+                        setNomeUsuario(usuarioPerfil.nome);
+                    }
                 }
             } catch (error) {
-                console.error("Erro ao buscar o saldo do perfil:", error);
+                console.error("Erro ao buscar o perfil:", error);
             }
         }
         
-        carregarSaldo();
-    }, []); // Executa apenas uma vez ao abrir a tela    
+        carregarPerfil();
+    }, []);
 
     return(
         <>
             <header className="header-criptoativos">
                 <div className="header-texto">
-                    <h1>Olá, <span>{}</span>!</h1>
+                    <h1>Olá, <span>{nomeUsuario}</span>!</h1>
                     <p>Acesse o mercado de criptomoedas e acompanhe as principais movimentações.</p>
                 </div>
                 <SaldoConta valor={saldoBrl}/>

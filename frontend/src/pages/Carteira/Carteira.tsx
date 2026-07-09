@@ -11,21 +11,15 @@ import SaldoConta from '../../components/SaldoConta/SaldoConta';
 
 interface CarteiraProps {
     carteira: CarteiraDTO;
-    carteiraId: string;
 }
 
-function Carteira({ carteira , carteiraId}: CarteiraProps) {
+function Carteira({ carteira }: CarteiraProps) {
     const router = useRouter();
-    
-    // Criamos um estado local apenas para segurar o saldo
     const [saldoBrl, setSaldoBrl] = useState<number>(0);
 
-    // O useEffect faz a busca do saldo assim que a página monta na tela, sem travar o Next
     useEffect(() => {
         async function carregarSaldo() {
             try {
-                // Como está no cliente, o axios/fetch já envia os cookies do navegador automaticamente!
-                // Não precisa passar 'cookieHeader' nem 'cookieStore' por parâmetro.
                 const usuarioPerfil = await buscarPerfil(); 
                 if (usuarioPerfil && usuarioPerfil.saldoBrl !== undefined) {
                     setSaldoBrl(usuarioPerfil.saldoBrl);
@@ -37,7 +31,7 @@ function Carteira({ carteira , carteiraId}: CarteiraProps) {
         }
         
         carregarSaldo();
-    }, []); // Executa apenas uma vez ao abrir a tela
+    }, []);
 
     return (
         <>

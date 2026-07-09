@@ -30,6 +30,10 @@
     color: #1f2937;
 }
 
+.header-criptoativos h1 span {
+    color: rgb(22 75 223);
+}
+
 .header-criptoativos p {
     color: #6b7280;
 }
