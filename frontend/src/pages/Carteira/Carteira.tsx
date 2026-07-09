@@ -1,30 +1,54 @@
 "use client";
-import React from 'react';
+import { useState, useEffect } from 'react';
 import moeda from "../../assets/images/moeda.jpg"
 import carteiraIMG from "../../assets/images/carteira.jpg";
 import TabelaAtivos from "../../components/TabelaAtivos/TabelaAtivos";
 import "./carteira.css"
 import { CarteiraDTO } from '../../tipos/carteira';
 import { useRouter } from 'next/navigation';
+import { buscarPerfil } from '../../services/usuario.services';
+import SaldoConta from '../../components/SaldoConta/SaldoConta';
 
 interface CarteiraProps {
     carteira: CarteiraDTO;
 }
 
 function Carteira({ carteira }: CarteiraProps) {
-
     const router = useRouter();
+    
+    // Criamos um estado local apenas para segurar o saldo
+    const [saldoBrl, setSaldoBrl] = useState<number>(0);
+
+    // O useEffect faz a busca do saldo assim que a página monta na tela, sem travar o Next
+    useEffect(() => {
+        async function carregarSaldo() {
+            try {
+                // Como está no cliente, o axios/fetch já envia os cookies do navegador automaticamente!
+                // Não precisa passar 'cookieHeader' nem 'cookieStore' por parâmetro.
+                const usuarioPerfil = await buscarPerfil(); 
+                if (usuarioPerfil && usuarioPerfil.saldoBrl !== undefined) {
+                    setSaldoBrl(usuarioPerfil.saldoBrl);
+
+                }
+            } catch (error) {
+                console.error("Erro ao buscar o saldo do perfil:", error);
+            }
+        }
+        
+        carregarSaldo();
+    }, []); // Executa apenas uma vez ao abrir a tela
 
     return (
         <>
             {/* Cabeçalho */}
             <header className="header-carteira">
-                <h1>
-                    <span>{carteira.nome}</span>
-                </h1>
-                <p>
-                    Gerencie seus ativos e acompanhe seu desempenho
-                </p>
+                <div className="header-texto">
+                    <h1>
+                        <span>{carteira.nome}</span>
+                    </h1>
+                    <p>Gerencie seus ativos e acompanhe seu desempenho</p>
+                </div>
+                <SaldoConta valor={saldoBrl}/>
             </header>
 
             {/* Principal */}
