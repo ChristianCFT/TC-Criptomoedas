@@ -1,6 +1,6 @@
 import '../TabelaAtivos/linhaAtivo.css';
 
-export default function LinhaMercadoCompra({ nome, sigla, preco, variacao24h, marketCap, imagemUrl }) {
+export default function LinhaMercadoCompra({ nome, sigla, preco, variacao24h, marketCap, imagemUrl, abrirModal }) {
     
     const corVariacao = variacao24h >= 0 ? "cor-positiva" : "cor-negativa";
     const sinal = variacao24h > 0 ? "+" : "";
@@ -29,7 +29,9 @@ export default function LinhaMercadoCompra({ nome, sigla, preco, variacao24h, ma
             </td>
 
             <td className="coluna-acoes">
-                <button className="btn-comprar">Comprar</button>
+                <button className="btn-comprar" onClick={abrirModal}>
+                    Comprar
+                </button>
             </td>
         </tr>
     );

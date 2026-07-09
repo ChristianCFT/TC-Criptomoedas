@@ -2,13 +2,18 @@
 
 import { useState } from "react";
 import "./modalComprarMoeda.css";
+import { comprarCriptomoeda } from "../../services/compra.services";
 
 interface ModalComprarMoedaProps {
     fechar: () => void;
+    cripto: any;
+    carteiraId: number;
 }
 
-function ModalComprarMoeda({ fechar }: ModalComprarMoedaProps) {
+function ModalComprarMoeda({ fechar, cripto , carteiraId}: ModalComprarMoedaProps) {
 
+    console.log("Carteira:", carteiraId);
+    console.log("Cripto:", cripto);
     const [valor, setValor] = useState("");
 
     async function comprarMoeda() {
@@ -20,12 +25,11 @@ function ModalComprarMoeda({ fechar }: ModalComprarMoedaProps) {
 
         try {
 
-            // Aqui ficará a chamada da API
-            console.log("Comprar moeda:", valor);
-
-            //await comprarMoeda({
-            //    valor: Number(valor)
-            //});
+            await comprarCriptomoeda({
+                carteiraId: carteiraId,
+                criptoId: cripto.id,
+                valorCompraBrl: Number(valor)
+            });
 
             setValor("");
             fechar();
@@ -46,7 +50,7 @@ function ModalComprarMoeda({ fechar }: ModalComprarMoedaProps) {
 
                 <div className="modal-header">
 
-                    <h2>Comprar moeda</h2>
+                    <h2>Comprar {cripto?.nome}</h2>
 
                     <button
                         className="btn-fechar"
