@@ -7,6 +7,7 @@ import { redirect } from 'next/navigation';
 import { me } from "../../services/auth.services";
 import ModalCarteira from "../../components/ModalCarteira/ModalCarteira";
 import { getDashboard } from "../../services/dashboard.services";
+import { buscarPerfil } from "../../services/usuario.services";
 
 
 async function Inicial(){
@@ -21,6 +22,7 @@ async function Inicial(){
     const cookieHeader = cookieStore.toString();
     const dashboard = await getDashboard(cookieHeader);
     const usuario = await me(cookieHeader);
+    const saldoUser = await buscarPerfil(cookieHeader);
 
     return (    
         <>
@@ -36,7 +38,10 @@ async function Inicial(){
                 <div className="saldo-conta">   
                     <p className="saldo-label">Saldo da conta</p>
                     <span className="saldo-valor">
-                            R$ {9999}
+                           {saldoUser.saldoBrl.toLocaleString("pt-BR", {
+                            style: "currency",
+                            currency: "BRL"
+                            })}
                     </span>
                 </div>
 
@@ -48,7 +53,7 @@ async function Inicial(){
                         <img src={moeda.src} alt="Imagem Moeda" />
                         <div>
                             <p className="title">Patrimônio total</p>
-                            <p className="valor">R$ <span>{dashboard.patrimonioTotal.toFixed(2)}</span></p>
+                            <p className="valor"><span>{dashboard.patrimonioTotal.toLocaleString("pt-BR", {style: "currency",currency: "BRL"})}</span></p>
                         </div>
                     </div>
 
