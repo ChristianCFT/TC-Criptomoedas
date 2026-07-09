@@ -5,12 +5,15 @@ import carteiraIMG from "../../assets/images/carteira.jpg";
 import TabelaAtivos from "../../components/TabelaAtivos/TabelaAtivos";
 import "./carteira.css"
 import { CarteiraDTO } from '../../tipos/carteira';
+import { useRouter } from 'next/navigation';
 
 interface CarteiraProps {
     carteira: CarteiraDTO;
 }
 
 function Carteira({ carteira }: CarteiraProps) {
+
+    const router = useRouter();
 
     return (
         <>
@@ -40,7 +43,7 @@ function Carteira({ carteira }: CarteiraProps) {
                                 SALDO TOTAL DA CARTEIRA
                             </h3>
                             <p className="valor-card-resumo">
-                                R$ <span>{Number(carteira.saldo ?? 0).toFixed(2)}</span>
+                                <span>{Number(carteira.saldoTotal ?? 0).toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}</span>
                             </p>
                         </div>
                     </div>
@@ -81,7 +84,10 @@ function Carteira({ carteira }: CarteiraProps) {
                         </div>
 
                         <div className="acoes-cabecalho">
-                            <button id="btn-comprar-cripto">
+                            <button 
+                                id="btn-comprar-cripto" 
+                                onClick={() => router.push(`/criptoativos/comprar?carteiraId=${carteira.id}`)}
+                            >
                                 Comprar Criptomoeda
                             </button>
                         </div>
