@@ -25,8 +25,21 @@ async function Inicial(){
     return (    
         <>
             <header className="header-inicial">
-                <h1>Olá, <span>{usuario.nome}</span>!</h1>
-                <p>Bem-vindo de volta a TC Criptomoedas.</p>
+                <div className="header-texto">
+                    <h1>
+                        Olá, <span>{usuario.nome}</span>!
+                    </h1>
+
+                    <p>Bem-vindo de volta a TC Criptomoedas.</p>
+                </div>
+
+                <div className="saldo-conta">   
+                    <p className="saldo-label">Saldo da conta</p>
+                    <span className="saldo-valor">
+                            R$ {9999}
+                    </span>
+                </div>
+
             </header>
 
             <main className="main-inicial">
