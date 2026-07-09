@@ -35,9 +35,9 @@ function ModalSaldo({ fechar }) {
 
         setValor("");
         setMetodoPagamento("");
-        router.refresh();
-
         fechar();
+
+        router.refresh();
     }
 
     return (
