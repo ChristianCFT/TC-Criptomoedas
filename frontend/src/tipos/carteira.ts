@@ -19,7 +19,7 @@ export interface AtivoDTO {
 export interface CarteiraDTO {
     id: number;
     nome: string;
-    saldo: number;
+    saldoTotal: number;
     quantidade: number;
     usuarioId: number;
     ativos?: AtivoDTO[];
