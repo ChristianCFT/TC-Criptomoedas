@@ -3,6 +3,7 @@
 import { useState } from "react";
 import "./modalVenderMoeda.css";
 import { venderCriptomoeda } from "../../services/venda.services";
+import { useRouter } from "next/navigation";
 
 interface ModalVenderMoedaProps {
     fechar: () => void;
@@ -13,6 +14,7 @@ interface ModalVenderMoedaProps {
 function ModalVenderMoeda({ fechar , cripto, carteiraId}: ModalVenderMoedaProps) {
 
     const [quantidade, setQuantidade] = useState("");
+    const router = useRouter();
 
     async function venderMoeda() {
 
@@ -31,6 +33,7 @@ function ModalVenderMoeda({ fechar , cripto, carteiraId}: ModalVenderMoedaProps)
 
             setQuantidade("");
             fechar();
+            router.refresh();
 
         } catch (error) {
 

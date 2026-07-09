@@ -7,11 +7,13 @@ import cartao from "../../assets/images/cartao de credito.png";
 import pix from "../../assets/images/pix.png";
 import { adicionarSaldo } from "../../services/usuario.services";
 import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 function ModalSaldo({ fechar }) {
 
     const [valor, setValor] = useState("");
     const [metodoPagamento, setMetodoPagamento] = useState("");
+    const router = useRouter();
 
     async function adicionarSaldoUsuario() {
 
@@ -33,6 +35,7 @@ function ModalSaldo({ fechar }) {
 
         setValor("");
         setMetodoPagamento("");
+        router.refresh();
 
         fechar();
     }
