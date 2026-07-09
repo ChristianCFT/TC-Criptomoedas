@@ -2,9 +2,6 @@
 import "./criptoativos.css"
 import TabelaMercado from "../../components/TabelaMercado/TabelaMercado";
 import { MoedaDTO } from "../../tipos/moeda";
-// import { cookies } from "next/headers";
-// import { redirect } from "next/navigation";
-// import { me } from "../../services/auth.services";
 import SaldoConta from "../../components/SaldoConta/SaldoConta";
 import { useEffect, useState } from "react";
 import { buscarPerfil } from "../../services/usuario.services";
@@ -15,15 +12,6 @@ interface CriptoativosProps{
 
 function Criptoativos({moedas}: CriptoativosProps) {
 
-    // const cookieStore = await cookies();
-    // const token = cookieStore.get("token");
-    
-    // if(!token){
-    //     redirect("/");
-    // }
-    
-    // const cookieHeader = cookieStore.toString();
-    // const usuario = await me(cookieHeader);
     const [saldoBrl, setSaldoBrl] = useState<number>(0);
     const [nomeUsuario, setNomeUsuario] = useState<string>("Investidor");
 

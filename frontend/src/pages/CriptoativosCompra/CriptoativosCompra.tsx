@@ -4,8 +4,8 @@ import SaldoConta from "../../components/SaldoConta/SaldoConta";
 import TabelaMercadoCompra from "../../components/TabelaMercadoCompra/TabelaMercadoCompra";
 import { buscarPerfil } from "../../services/usuario.services";
 import { MoedaDTO } from "../../tipos/moeda";
-import "../Criptoativos/criptoativos.css"
 import { buscarCarteiraPorId } from "../../services/carteiras.services";
+import "./criptoativosCompra.css" 
 
 interface CriptoativosProps{
     moedas: MoedaDTO[],
@@ -13,8 +13,6 @@ interface CriptoativosProps{
 }
 
 function CriptoativosCompra({ moedas, carteiraId }: CriptoativosProps) {
-
-    
     const [saldoBrl, setSaldoBrl] = useState<number>(0);
     const [nomeCarteira,setNomeCarteira] = useState<string>("Carteira");
 
@@ -40,8 +38,8 @@ function CriptoativosCompra({ moedas, carteiraId }: CriptoativosProps) {
 
     return(
         <>
-            <header className="header-criptoativos">
-                <div className="header-texto">
+            <header className="header-criptoativos-compra">
+                <div className="header-texto-compra">
                     <h1><span>{nomeCarteira}</span></h1>
                     <p>Faça a escolha do ativo que falta na sua carteira.</p>
                 </div>
@@ -49,8 +47,8 @@ function CriptoativosCompra({ moedas, carteiraId }: CriptoativosProps) {
             </header>
             
 
-            <main className="main-criptoativos">
-                <div id="mercado-moeda-global">
+            <main className="main-criptoativos-compra">
+                <div id="mercado-moeda-global-compra">
                     <TabelaMercadoCompra mercadoGlobalCompra={moedas} carteiraId={carteiraId}/>
                 </div>
             </main>

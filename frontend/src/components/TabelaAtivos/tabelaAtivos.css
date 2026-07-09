@@ -1,6 +1,7 @@
 #secao-tabela-ativos {
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 #tabela-ativos {
