@@ -14,8 +14,8 @@ function LinhaAtivo({ imagem, nome, sigla, quantidade, preco, total, abrirModal,
                 </div>
             </td>
             <td className="coluna-quantidade">{Number(quantidade).toFixed(4)}</td>
-            <td className="coluna-preco">R$ {Number(preco).toFixed(2)}</td>
-            <td className="coluna-valor-total">R$ {Number(total).toFixed(2)}</td>
+            <td className="coluna-preco">{Number(preco ?? 0).toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}</td>
+            <td className="coluna-valor-total">{Number(total ?? 0).toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}</td>
             <td className="coluna-acoes">
                 <div className="acoes-ativo">
                     <button className="btn-comprar" onClick={abrirModal}>Comprar</button>
