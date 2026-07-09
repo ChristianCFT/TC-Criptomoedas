@@ -1,4 +1,4 @@
-.header-criptoativos{
+/* .header-criptoativos{
     background: white;
     border-bottom: 1px solid #e5e7eb;
     box-shadow: 0 2px 10px rgba(0,0,0,.05);
@@ -12,6 +12,31 @@
     p{
         color:#6b7280;
     }
+} */
+
+/* Cabeçalho */
+.header-criptoativos {
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 2px 10px rgba(0,0,0,.05);
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.header-criptoativos h1 {
+    margin-bottom: 0.4rem;
+    color: #1f2937;
+}
+
+.header-criptoativos p {
+    color: #6b7280;
+}
+
+.header-texto{
+    display: flex;
+    flex-direction: column;
 }
 
 .main-criptoativos{
