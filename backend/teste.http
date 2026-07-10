@@ -84,9 +84,9 @@ Content-Type: application/json
 ### ==========================================
 
 ### Buscar uma Carteira Específica
-GET http://localhost:3001/carteiras/1
+GET http://localhost:3001/carteiras/3
 
 ### ==========================================
 
 ### Deletar uma Carteira
-DELETE http://localhost:3001/carteiras/14
+DELETE http://localhost:3001/carteiras/1
