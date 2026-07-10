@@ -4,6 +4,7 @@ import { useState } from "react";
 import "./modalComprarMoeda.css";
 import { comprarCriptomoeda } from "../../services/compra.services";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 
 interface ModalComprarMoedaProps {
     fechar: () => void;
@@ -21,7 +22,7 @@ function ModalComprarMoeda({ fechar, cripto , carteiraId}: ModalComprarMoedaProp
     async function comprarMoeda() {
 
         if (valor.trim() === "") {
-            alert("Digite o valor da compra.");
+            toast.error("Digite o valor da compra.");
             return;
         }
 
@@ -33,6 +34,7 @@ function ModalComprarMoeda({ fechar, cripto , carteiraId}: ModalComprarMoedaProp
                 valorCompraBrl: Number(valor)
             });
 
+            toast.success("Compra realizada com sucesso!")
             setValor("");
             fechar();
             router.refresh();
@@ -40,7 +42,7 @@ function ModalComprarMoeda({ fechar, cripto , carteiraId}: ModalComprarMoedaProp
         } catch (error) {
 
             console.error(error);
-            alert("Erro ao comprar moeda.");
+            toast.error("Erro ao comprar moeda.");
 
         }
 
