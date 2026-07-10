@@ -23,7 +23,7 @@ function Carteira({ carteira }: CarteiraProps) {
                 const usuarioPerfil = await buscarPerfil(); 
                 if (usuarioPerfil && usuarioPerfil.saldoBrl !== undefined) {
                     setSaldoBrl(usuarioPerfil.saldoBrl);
-
+                    carregarSaldo();
                 }
             } catch (error) {
                 console.error("Erro ao buscar o saldo do perfil:", error);
