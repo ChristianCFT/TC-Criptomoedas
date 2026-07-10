@@ -12,7 +12,7 @@ export class VisaoGeralService {
                     include: {
                         ativos: {
                             include: {
-                                cripto: true // Traz o precoAtual e simbolo da moeda
+                                cripto: true
                             }
                         }
                     }
