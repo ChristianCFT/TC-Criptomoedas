@@ -8,14 +8,20 @@ import { toast } from "sonner";
 
 interface ModalVenderMoedaProps {
     fechar: () => void;
-    cripto: any,
-    carteiraId: number,
+    cripto: any;
+    carteiraId: number;
 }
 
 function ModalVenderMoeda({ fechar , cripto, carteiraId}: ModalVenderMoedaProps) {
 
     const [quantidade, setQuantidade] = useState("");
     const router = useRouter();
+
+    function preencherMaximo() {
+        if (cripto && cripto.quantidade) {
+            setQuantidade(String(cripto.quantidade));
+        }
+    }
 
     async function venderMoeda() {
     
@@ -73,14 +79,27 @@ function ModalVenderMoeda({ fechar , cripto, carteiraId}: ModalVenderMoedaProps)
                         Quantidade da moeda
                     </label>
 
-                    <input
-                        id="quantidadeVenda"
-                        type="number"
-                        value={quantidade}
-                        onChange={(e) => setQuantidade(e.target.value)}
-                        placeholder="Quantidade"
-                    />
+                    <div className="input-group">
+                        <input
+                            id="quantidadeVenda"
+                            type="number"
+                            value={quantidade}
+                            onChange={(e) => setQuantidade(e.target.value)}
+                            placeholder="Quantidade"
+                        />
+                        
+                        <button 
+                            type="button" 
+                            className="btn-maximo"
+                            onClick={preencherMaximo}
+                        >
+                            Máximo
+                        </button>
+                    </div>
 
+                    <span className="saldo-disponivel">
+                        Saldo disponível: {cripto?.quantidade}
+                    </span>
                 </div>
 
                 <div className="modal-footer">
