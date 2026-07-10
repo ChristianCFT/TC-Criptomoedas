@@ -4,6 +4,7 @@ import { useState } from "react";
 import "./modalVenderMoeda.css";
 import { venderCriptomoeda } from "../../services/venda.services";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 
 interface ModalVenderMoedaProps {
     fechar: () => void;
@@ -17,31 +18,35 @@ function ModalVenderMoeda({ fechar , cripto, carteiraId}: ModalVenderMoedaProps)
     const router = useRouter();
 
     async function venderMoeda() {
-
+    
         if (quantidade.trim() === "") {
-            alert("Digite a quantidade da moeda.");
+            toast.error("Digite a quantidade da moeda");
             return;
         }
 
-        try {
+        const quantidadeConvertida = Number(quantidade);
 
+        if (quantidadeConvertida <= 0) {
+            toast.error("A quantidade deve ser maior que zero!");
+            return; 
+        }
+
+        try {
             await venderCriptomoeda({
                 carteiraId: carteiraId,
                 criptoId: cripto.id,
-                quantidade: Number(quantidade)
+                quantidade: quantidadeConvertida
             });
 
+            toast.success("Venda realizada com sucesso");
             setQuantidade("");
             fechar();
             router.refresh();
 
         } catch (error) {
-
             console.error(error);
-            alert("Erro ao vender moeda.");
-
+            toast.error("Erro ao vender moeda");
         }
-
     }
 
     return (
